@@ -1508,13 +1508,14 @@ const app = {
             }
             
             ctx.fillStyle = '#0b2545';
-            ctx.font = 'bold 38px Georgia';
+            ctx.font = 'bold 36px Georgia';
             ctx.textAlign = 'center';
-            ctx.fillText('Nossa Senhora da Conceição Aparecida', canvas.width / 2, 800);
+            ctx.fillText('Nossa Senhora da', canvas.width / 2, 780);
+            ctx.fillText('Conceição Aparecida', canvas.width / 2, 825);
             
             ctx.fillStyle = '#d4af37';
             ctx.font = 'bold italic 22px Georgia';
-            ctx.fillText('Rainha e Padroeira do Brasil', canvas.width / 2, 850);
+            ctx.fillText('Rainha e Padroeira do Brasil', canvas.width / 2, 885);
             
             ctx.fillStyle = '#64748b';
             ctx.font = 'italic 16px sans-serif';
