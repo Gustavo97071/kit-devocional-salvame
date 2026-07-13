@@ -1301,13 +1301,42 @@ const app = {
                 return;
             }
 
+            // Caso especial: Pôster Oficial Nossa Senhora
+            if (fileName.includes('Poster-Nossa-Senhora')) {
+                this.generatePosterNossaSenhora((dataUrl) => {
+                    const link = document.createElement('a');
+                    link.href = dataUrl;
+                    link.download = 'Poster-Nossa-Senhora-Impressao.png';
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                    this.showToast(`✅ Pôster Oficial baixado para impressão!`);
+                });
+                return;
+            }
+
+            // Caso especial: Pôster Consagração do Lar
+            if (fileName.includes('Poster-Consagracao')) {
+                this.generatePosterConsagracao((dataUrl) => {
+                    const link = document.createElement('a');
+                    link.href = dataUrl;
+                    link.download = 'Poster-Consagracao-Impressao.png';
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                    this.showToast(`✅ Pôster de Consagração baixado para impressão!`);
+                });
+                return;
+            }
+
             let fileUrl = '';
             let finalFileName = fileName;
             
-            // Se for imagem ou pôster, baixa a arte real ns_aparecida.png
-            if (fileName.endsWith('.jpg') || fileName.endsWith('.png') || fileName.includes('Poster-Nossa-Senhora') || fileName.includes('Wallpaper')) {
+            // Caso geral: se for imagem, baixa ns_aparecida.png
+            if (fileName.endsWith('.jpg') || fileName.endsWith('.png') || fileName.includes('Wallpaper')) {
                 fileUrl = 'assets/ns_aparecida.png';
                 finalFileName = fileName.replace(/\.pdf$/, '.png').replace(/\.jpg$/, '.png');
+            } else {
                 // Gera um arquivo de texto de demonstração e muda a extensão para .txt
                 const content = `Associação Mãe Santíssima\n\nEste é o arquivo demonstrativo do seu Kit Devocional:\n- Nome do Material: ${fileName}\n\nNa versão final de produção do cliente, este link fará o download do arquivo PDF/ZIP completo contendo o material diagramado de 100+ páginas.`;
                 const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
@@ -1444,6 +1473,120 @@ const app = {
             }
         }
         ctx.fillText(line, x, currentY);
+    },
+
+    generatePosterNossaSenhora(callback) {
+        const canvas = document.createElement('canvas');
+        canvas.width = 800;
+        canvas.height = 1130;
+        const ctx = canvas.getContext('2d');
+        
+        ctx.fillStyle = '#faf6ee';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        
+        ctx.strokeStyle = '#d4af37';
+        ctx.lineWidth = 6;
+        ctx.strokeRect(20, 20, canvas.width - 40, canvas.height - 40);
+        
+        ctx.strokeStyle = '#0b2545';
+        ctx.lineWidth = 1.5;
+        ctx.strokeRect(32, 32, canvas.width - 64, canvas.height - 64);
+        
+        const img = new Image();
+        img.src = 'assets/ns_aparecida.png';
+        
+        const drawAll = () => {
+            if (img.complete && img.naturalWidth !== 0) {
+                const imgW = 540;
+                const imgH = 540;
+                ctx.drawImage(img, (canvas.width - imgW) / 2, 130, imgW, imgH);
+            } else {
+                ctx.fillStyle = '#aa7c11';
+                ctx.font = '120px sans-serif';
+                ctx.textAlign = 'center';
+                ctx.fillText('†', canvas.width / 2, 400);
+            }
+            
+            ctx.fillStyle = '#0b2545';
+            ctx.font = 'bold 38px Georgia';
+            ctx.textAlign = 'center';
+            ctx.fillText('Nossa Senhora da Conceição Aparecida', canvas.width / 2, 800);
+            
+            ctx.fillStyle = '#d4af37';
+            ctx.font = 'bold italic 22px Georgia';
+            ctx.fillText('Rainha e Padroeira do Brasil', canvas.width / 2, 850);
+            
+            ctx.fillStyle = '#64748b';
+            ctx.font = 'italic 16px sans-serif';
+            ctx.fillText('Associação Mãe Santíssima', canvas.width / 2, 1040);
+            
+            callback(canvas.toDataURL('image/png'));
+        };
+        
+        img.onload = drawAll;
+        img.onerror = drawAll;
+    },
+
+    generatePosterConsagracao(callback) {
+        const canvas = document.createElement('canvas');
+        canvas.width = 800;
+        canvas.height = 1130;
+        const ctx = canvas.getContext('2d');
+        
+        ctx.fillStyle = '#faf6ee';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        
+        ctx.strokeStyle = '#0b2545';
+        ctx.lineWidth = 6;
+        ctx.strokeRect(20, 20, canvas.width - 40, canvas.height - 40);
+        
+        ctx.strokeStyle = '#d4af37';
+        ctx.lineWidth = 1.5;
+        ctx.strokeRect(32, 32, canvas.width - 64, canvas.height - 64);
+        
+        ctx.fillStyle = '#d4af37';
+        ctx.font = '48px Georgia';
+        ctx.textAlign = 'center';
+        ctx.fillText('†', canvas.width / 2, 120);
+        
+        ctx.fillStyle = '#0b2545';
+        ctx.font = 'bold 36px Georgia';
+        ctx.fillText('Consagração a Nossa Senhora', canvas.width / 2, 210);
+        
+        ctx.strokeStyle = 'rgba(212, 175, 55, 0.5)';
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(250, 250);
+        ctx.lineTo(550, 250);
+        ctx.stroke();
+        
+        ctx.fillStyle = '#1e293b';
+        ctx.font = 'italic 22px Georgia';
+        
+        const text = 'Ó minha Senhora, ó minha Mãe,\n' +
+                     'eu me ofereço todo a vós\n' +
+                     'e, em prova da minha devoção para convosco,\n' +
+                     'vos consagro neste dia e para sempre,\n' +
+                     'meus olhos, meus ouvidos, minha boca,\n' +
+                     'meu coração e todo o meu ser.\n\n' +
+                     'E porque assim sou vosso,\n' +
+                     'ó incomparável Mãe,\n' +
+                     'guardai-me e defendei-me\n' +
+                     'como coisa e propriedade vossa.\n\n' +
+                     'Amém.';
+                     
+        const lines = text.split('\n');
+        let currentY = 320;
+        lines.forEach(line => {
+            ctx.fillText(line, canvas.width / 2, currentY);
+            currentY += 40;
+        });
+        
+        ctx.fillStyle = '#aa7c11';
+        ctx.font = 'bold 16px sans-serif';
+        ctx.fillText('ASSOCIAÇÃO MÃE SANTÍSSIMA', canvas.width / 2, 1020);
+        
+        callback(canvas.toDataURL('image/png'));
     },
 
     showToast(message) {

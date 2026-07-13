@@ -128,16 +128,7 @@
                         </div>
                     </div>
 
-                    <!-- Item 7 -->
-                    <div class="kit-card">
-                        <div class="card-icon">🖼️</div>
-                        <h3 class="card-title">30 Wallpapers de Alta Resolução</h3>
-                        <p class="card-desc">Lindas artes devocionais para celular e desktop que manterão sua mente elevada a Deus em suas telas.</p>
-                        <div class="card-meta">
-                            <span class="meta-pages">📱 Mobile & Desktop</span>
-                            <button class="card-btn" onclick="app.openPortalItem('wallpapers')">Ver Galeria →</button>
-                        </div>
-                    </div>
+
 
                     <!-- Item 8 -->
                     <div class="kit-card">
@@ -226,11 +217,7 @@
                                     <span class="sidebar-icon">📅</span> Calendário Litúrgico
                                 </button>
                             </li>
-                            <li>
-                                <button class="sidebar-link" id="menu-wallpapers" onclick="app.switchPortalView('wallpapers')">
-                                    <span class="sidebar-icon">🖼️</span> 30 Wallpapers
-                                </button>
-                            </li>
+
                             <li>
                                 <button class="sidebar-link" id="menu-posters" onclick="app.switchPortalView('posters')">
                                     <span class="sidebar-icon">🖼️</span> Pôsteres A4 & A3
@@ -615,64 +602,7 @@
                             </div>
                         </div>
 
-                        <!-- Portal View 7: 30 Wallpapers -->
-                        <div class="portal-view" id="port-wallpapers">
-                            <div class="portal-card">
-                                <div class="portal-header-row">
-                                    <div class="portal-title-group">
-                                        <h2>30 Wallpapers Exclusivos</h2>
-                                        <span class="portal-subtitle">Inspiração sacra e marianista em todas as suas telas</span>
-                                    </div>
-                                    <button class="btn-download-pdf" onclick="app.downloadFile('Kit-Todos-Wallpapers.zip')">
-                                        📥 Baixar Todos (.zip)
-                                    </button>
-                                </div>
 
-                                <div class="gallery-grid">
-                                    <!-- Wallpaper 1 -->
-                                    <div class="wallpaper-card">
-                                        <div class="wallpaper-preview">
-                                            <div class="smartphone-mockup-frame">
-                                                <img src="assets/ns_aparecida.png" alt="Manto de Estrelas">
-                                            </div>
-                                        </div>
-                                        <div class="wallpaper-info">
-                                            <div class="wallpaper-title">Manto de Estrelas</div>
-                                            <div class="wallpaper-meta">Mobile (Smartphone)</div>
-                                            <button class="btn-download-asset" onclick="app.downloadFile('Wallpaper-Manto-Estrelas-Mobile.jpg')">📥 Download</button>
-                                        </div>
-                                    </div>
-
-                                    <!-- Wallpaper 2 -->
-                                    <div class="wallpaper-card">
-                                        <div class="wallpaper-preview">
-                                            <div class="desktop-mockup-frame">
-                                                <img src="assets/ns_aparecida.png" alt="Padroeira do Brasil">
-                                            </div>
-                                        </div>
-                                        <div class="wallpaper-info">
-                                            <div class="wallpaper-title">Padroeira do Brasil</div>
-                                            <div class="wallpaper-meta">Desktop (Computador)</div>
-                                            <button class="btn-download-asset" onclick="app.downloadFile('Wallpaper-Padroeira-Desktop.jpg')">📥 Download</button>
-                                        </div>
-                                    </div>
-
-                                    <!-- Wallpaper 3 -->
-                                    <div class="wallpaper-card">
-                                        <div class="wallpaper-preview" style="background: linear-gradient(135deg, var(--marian-blue-dark), var(--gold-dark));">
-                                            <div class="smartphone-mockup-frame">
-                                                <div style="width:100%; height:100%; display:flex; justify-content:center; align-items:center; color:#fff; font-size:4rem; font-family: var(--font-serif);">†</div>
-                                            </div>
-                                        </div>
-                                        <div class="wallpaper-info">
-                                            <div class="wallpaper-title">Cruz Imperial Gold</div>
-                                            <div class="wallpaper-meta">Mobile (Smartphone)</div>
-                                            <button class="btn-download-asset" onclick="app.downloadFile('Wallpaper-Cruz-Gold-Mobile.jpg')">📥 Download</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
                         <!-- Portal View 8: Posters -->
                         <div class="portal-view" id="port-posters">
@@ -698,7 +628,7 @@
                                         <div class="wallpaper-info">
                                             <div class="wallpaper-title">Pôster Oficial Nossa Senhora</div>
                                             <div class="wallpaper-meta">Disponível em A3 e A4 (300 DPI)</div>
-                                            <button class="btn-download-asset" onclick="app.downloadFile('Poster-Nossa-Senhora-Alta.pdf')">📥 Baixar PDF para Impressão</button>
+                                            <button class="btn-download-asset" onclick="app.downloadFile('Poster-Nossa-Senhora-Alta.png')">📥 Baixar Pôster (PNG para Impressão)</button>
                                         </div>
                                     </div>
 
@@ -715,7 +645,7 @@
                                         <div class="wallpaper-info">
                                             <div class="wallpaper-title">Pôster Consagração do Lar</div>
                                             <div class="wallpaper-meta">Disponível em A3 e A4 (300 DPI)</div>
-                                            <button class="btn-download-asset" onclick="app.downloadFile('Poster-Consagracao-Alta.pdf')">📥 Baixar PDF para Impressão</button>
+                                            <button class="btn-download-asset" onclick="app.downloadFile('Poster-Consagracao-Alta.png')">📥 Baixar Pôster (PNG para Impressão)</button>
                                         </div>
                                     </div>
                                 </div>
