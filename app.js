@@ -526,36 +526,96 @@ const app = {
     ],
 
     // Novena Sample Data
-    novenaDays: [
+        novenaDays: [
         {
             day: "1º Dia da Novena",
             title: "Senhora Aparecida: Mãe da Esperança",
             text: `
-                <p><strong>Palavra da Igreja:</strong> "Esperar contra toda esperança!" Maria permaneceu de pé junto à Cruz. Ela guardou a fé mesmo no sábado do silêncio.</p>
-                <p><strong>Meditação:</strong> Ao iniciarmos esta novena, pedimos a Nossa Senhora Aparecida que cure nossos desânimos e nos ensine a confiar no tempo de Deus. Nenhum filho de Maria é abandonado.</p>
-                <p><strong>Oração do Dia:</strong> Ó Virgem Aparecida, consoladora dos aflitos, colocamos em vosso coração nossa esperança. Intercedei por nós junto a Jesus para obtermos as forças necessárias para vencer os desafios diários. Amém.</p>
-            `,
+            <p><strong>Palavra da Igreja:</strong> "Esperar contra toda esperança!" Maria permaneceu de pé junto à Cruz. Ela guardou a fé mesmo no sábado do silêncio.</p>
+            <p><strong>Meditação:</strong> Ao iniciarmos esta novena, pedimos a Nossa Senhora Aparecida que cure nossos desânimos e nos ensine a confiar no tempo de Deus. Nenhum filho de Maria é abandonado nas suas necessidades.</p>
+            <p><strong>Oração do Dia:</strong> Ó Virgem Aparecida, consoladora dos aflitos, colocamos em vosso coração nossa esperança. Intercedei por nós junto a Jesus para obtermos as forças necessárias para vencer os desafios diários. Amém.</p>
+        `,
             number: "Missa de Abertura"
         },
         {
             day: "2º Dia da Novena",
             title: "Senhora Aparecida: Estrela da Família",
             text: `
-                <p><strong>Palavra da Igreja:</strong> A família é o santuário da vida e a igreja doméstica. Maria, José e Jesus formaram o lar sagrado de Nazaré.</p>
-                <p><strong>Meditação:</strong> Colocamos sob o manto protetor de Nossa Senhora todas as famílias do Brasil, especialmente aquelas que sofrem com divisões, desemprego ou enfermidades.</p>
-                <p><strong>Oração do Dia:</strong> Mãe Aparecida, abençoai nossa casa, protegei nossos filhos e trazei harmonia, paz e fé a todos os casais. Fazei do nosso lar uma extensão de Nazaré. Amém.</p>
-            `,
+            <p><strong>Palavra da Igreja:</strong> A família é o santuário da vida e a igreja doméstica. Maria, José e Jesus formaram o lar sagrado e obediente de Nazaré.</p>
+            <p><strong>Meditação:</strong> Colocamos sob o manto protetor de Nossa Senhora todas as famílias do Brasil, especialmente aquelas que sofrem com divisões, desemprego ou enfermidades.</p>
+            <p><strong>Oração do Dia:</strong> Mãe Aparecida, abençoai nossa casa, protegei nossos filhos e trazei harmonia, paz e fé a todos os casais. Fazei do nosso lar uma extensão de Nazaré. Amém.</p>
+        `,
             number: "Missa das Famílias"
         },
         {
             day: "3º Dia da Novena",
             title: "Senhora Aparecida: Auxílio dos Enfermos",
             text: `
-                <p><strong>Palavra da Igreja:</strong> "Estive doente e me visitastes". Jesus curava os necessitados e Maria compartilha desse amor compassivo.</p>
-                <p><strong>Meditação:</strong> O sofrimento físico e mental faz parte do mistério da cruz. Entregamos a Maria a cura e o alívio das dores daqueles que padecem nos hospitais e lares.</p>
-                <p><strong>Oração do Dia:</strong> Ó Mãe de Misericórdia, saúde dos enfermos, derramai vossas graças de restabelecimento físico e espiritual sobre todos os que sofrem. Dai-nos paciência e confiança. Amém.</p>
-            `,
+            <p><strong>Palavra da Igreja:</strong> "Estive doente e me visitastes". Jesus curava os necessitados e Maria compartilha desse amor compassivo por suas dores.</p>
+            <p><strong>Meditação:</strong> O sofrimento físico e mental faz parte do mistério da cruz. Entregamos a Maria a cura e o alívio das dores daqueles que padecem nos hospitais e lares.</p>
+            <p><strong>Oração do Dia:</strong> Ó Mãe de Misericórdia, saúde dos enfermos, derramai vossas graças de restabelecimento físico e espiritual sobre todos os que sofrem. Dai-nos paciência e confiança. Amém.</p>
+        `,
             number: "Missa da Saúde"
+        },
+        {
+            day: "4º Dia da Novena",
+            title: "Senhora Aparecida: Consoladora dos Aflitos",
+            text: `
+            <p><strong>Palavra da Igreja:</strong> "Vinde a mim, todos os que estais cansados". Jesus é o porto seguro e Maria é o canal de amor que nos conduz ao Seu consolo divino.</p>
+            <p><strong>Meditação:</strong> Nas aflições de perdas, solidão e incertezas do futuro, Maria nos acolhe sob seu manto azul, trazendo serenidade e alento aos nossos corações fatigados.</p>
+            <p><strong>Oração do Dia:</strong> Ó Virgem Consoladora, olhai para nossas angústias. Afastai o desespero de nossa mente e concedei-nos a força do Espírito Santo para vencer as provações diárias. Amém.</p>
+        `,
+            number: "Missa da Proteção"
+        },
+        {
+            day: "5º Dia da Novena",
+            title: "Senhora Aparecida: Mãe dos Pobres e Humildes",
+            text: `
+            <p><strong>Palavra da Igreja:</strong> "Derrubou os poderosos de seus tronos e elevou os humildes". O cântico do Magnificat proclama a predileção de Deus pelos pequeninos.</p>
+            <p><strong>Meditação:</strong> O resgate da Imagem simples por pescadores humildes e a libertação de Zacarias nos mostram que a Mãe de Deus está sempre atenta e solícita às preces dos oprimidos.</p>
+            <p><strong>Oração do Dia:</strong> Mãe Aparecida, ensinai-nos a partilhar com os necessitados e dai-nos um coração generoso, livre do egoísmo e cheio de caridade cristã. Amém.</p>
+        `,
+            number: "Missa da Caridade"
+        },
+        {
+            day: "6º Dia da Novena",
+            title: "Senhora Aparecida: Guia da Juventude",
+            text: `
+            <p><strong>Palavra da Igreja:</strong> A Igreja necessita do sim generoso e forte dos jovens para levar a palavra do Evangelho a todos os cantos e renovar o mundo.</p>
+            <p><strong>Meditação:</strong> Sob o patrocínio da Virgem, confiamos os projetos e caminhos da juventude, para que sigam caminhos de retidão, verdade, respeito e integridade.</p>
+            <p><strong>Oração do Dia:</strong> Ó Virgem Imaculada, protegei nossos jovens contra as ilusões do mundo, guardai sua pureza e dai-lhes coragem para testemunhar a fé cristã com orgulho. Amém.</p>
+        `,
+            number: "Missa dos Jovens"
+        },
+        {
+            day: "7º Dia da Novena",
+            title: "Senhora Aparecida: Rainha da Paz",
+            text: `
+            <p><strong>Palavra da Igreja:</strong> "Deixo-vos a paz, a minha paz vos dou". Maria é a Mãe do Príncipe da Paz e nos ensina a ser construtores de reconciliação.</p>
+            <p><strong>Meditação:</strong> As discórdias, fofocas e falta de perdão destroem as famílias. Pedimos a intercessão da Rainha da Paz para restabelecer a união e o amor recíproco.</p>
+            <p><strong>Oração do Dia:</strong> Rainha da Paz, afastai toda ira e rancor dos nossos corações. Semeai o diálogo e a compreensão mútua em nossas casas e na sociedade em que vivemos. Amém.</p>
+        `,
+            number: "Missa da Paz"
+        },
+        {
+            day: "8º Dia da Novena",
+            title: "Senhora Aparecida: Mãe das Vocações",
+            text: `
+            <p><strong>Palavra da Igreja:</strong> "Eis aí a tua mãe". Do alto da cruz, Jesus entregou a Igreja inteira aos cuidados de Maria, que nos acompanha e sustenta.</p>
+            <p><strong>Meditação:</strong> Rezamos pelo Papa, bispos e sacerdotes. Pedimos à Mãe das Vocações que inspire muitos corações jovens a doar suas vidas pela causa do Reino de Deus.</p>
+            <p><strong>Oração do Dia:</strong> Ó Mãe do Bom Conselho, abençoai nossos sacerdotes e religiosos. Despertai nas famílias vocações santas e generosas para o serviço do Evangelho. Amém.</p>
+        `,
+            number: "Missa Vocacional"
+        },
+        {
+            day: "9º Dia da Novena",
+            title: "Senhora Aparecida: Padroeira do Brasil",
+            text: `
+            <p><strong>Palavra da Igreja:</strong> Em 1930, o Papa Pio XI declarou solenemente Nossa Senhora da Conceição Aparecida como a Padroeira Principal de toda a nação brasileira.</p>
+            <p><strong>Meditação:</strong> No encerramento desta novena de fé, consagramos nosso país, nosso povo, nossos lares e paróquias sob o manto azul marinho da Virgem Maria Aparecida.</p>
+            <p><strong>Oração do Dia:</strong> Ó Senhora Aparecida, Rainha e Padroeira do Brasil, acolhei nossa nação sob vossa proteção constante. Livrai-nos dos perigos e guiai-nos à pátria celeste. Amém.</p>
+        `,
+            number: "Missa Solene da Festa"
         }
     ],
 
