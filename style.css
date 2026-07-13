@@ -1739,18 +1739,34 @@ input:focus, textarea:focus, select:focus {
         position: sticky;
         top: 73px;
         z-index: 90;
+        background: var(--marian-blue-dark);
     }
     
     .sidebar-menu {
         flex-direction: row;
         overflow-x: auto;
-        padding: 10px;
+        padding: 12px 10px;
         gap: 10px;
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+    
+    .sidebar-menu::-webkit-scrollbar {
+        display: none; /* Hide scrollbar for mobile menus */
     }
     
     .sidebar-link {
         white-space: nowrap;
         padding: 8px 16px;
+        border-radius: var(--radius-full);
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(212, 175, 55, 0.15);
+    }
+    
+    .sidebar-link.active {
+        background: var(--gold);
+        color: var(--marian-blue-dark);
+        border-color: var(--gold-light);
     }
     
     .sidebar-header {
@@ -1758,45 +1774,60 @@ input:focus, textarea:focus, select:focus {
     }
     
     .portal-view {
-        padding: 20px;
+        padding: 20px 15px;
     }
     
     .portal-card {
-        padding: 25px;
+        padding: 25px 20px;
     }
     
     .terco-layout {
         grid-template-columns: 1fr;
+        gap: 25px;
     }
     
     .diary-layout {
         grid-template-columns: 1fr;
+        gap: 25px;
     }
 }
 
 @media (max-width: 768px) {
     .hero-section {
         flex-direction: column;
-        padding: 60px 5% 40px;
+        padding: 50px 5% 35px;
         text-align: center;
+        gap: 25px;
     }
     
     .hero-ctas {
         justify-content: center;
+        flex-wrap: wrap;
     }
     
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2.3rem;
+        line-height: 1.2;
+    }
+    
+    .portal-sidebar {
+        top: 115px; /* Adjust to clear stacked sticky navbar */
     }
     
     .book-spine {
         flex-direction: column;
         height: auto;
         max-width: 100%;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
     }
     
     .book-spine::after {
         display: none;
+    }
+    
+    .book-page {
+        padding: 25px 20px;
+        min-height: auto;
     }
     
     .book-page-left {
@@ -1804,17 +1835,39 @@ input:focus, textarea:focus, select:focus {
         border-bottom: 1px solid rgba(0,0,0,0.08);
     }
     
+    .book-title-tag {
+        font-size: 1.6rem;
+    }
+    
+    .terco-canvas-area {
+        height: 330px;
+        padding: 10px;
+    }
+    
+    .prayer-display-modal {
+        padding: 25px 15px;
+    }
+    
+    .prayer-display-title {
+        font-size: 1.8rem;
+    }
+    
+    .prayer-display-content {
+        font-size: 1.1rem;
+        text-align: left;
+    }
+    
     .calendar-grid {
-        gap: 5px;
+        gap: 4px;
     }
     
     .calendar-day-cell {
-        height: 65px;
+        height: 60px;
         padding: 4px;
     }
     
     .day-number {
-        font-size: 0.85rem;
+        font-size: 0.8rem;
     }
     
     .day-feast {
@@ -1825,6 +1878,7 @@ input:focus, textarea:focus, select:focus {
         flex-direction: column;
         gap: 15px;
         padding: 15px;
+        text-align: center;
     }
     
     .nav-tabs {
@@ -1835,19 +1889,44 @@ input:focus, textarea:focus, select:focus {
 
 @media (max-width: 480px) {
     .hero-title {
-        font-size: 2rem;
+        font-size: 1.9rem;
+    }
+    
+    .hero-desc {
+        font-size: 0.95rem;
     }
     
     .section-headline {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
     
     .kit-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
     
     .nav-tab-btn {
-        padding: 6px 12px;
+        padding: 8px 12px;
         font-size: 0.85rem;
+        flex: 1;
+        text-align: center;
+    }
+    
+    .portal-view {
+        padding: 12px 8px;
+    }
+    
+    .portal-card {
+        padding: 15px 12px;
+    }
+    
+    .prayers-filters {
+        padding-bottom: 12px;
+        gap: 8px;
+    }
+    
+    .filter-pill {
+        padding: 6px 12px;
+        font-size: 0.8rem;
     }
 }
