@@ -12,57 +12,516 @@ const app = {
     calendarYear: 2026,
     
     // Ebook Sample Data
-    ebookDays: [
+        ebookDays: [
         {
             day: "Dia 1",
             title: "O Encontro da Imagem",
             leftContent: `
-                <p>No ano de 1717, três pescadores — Filipe Pedroso, Domingos Garcia e João Alves — navegavam pelo Rio Paraíba do Sul. A pescaria estava muito escassa, e eles já desanimavam de conseguir peixes para o banquete do governador local.</p>
-                <p>Ao lançarem as redes no Porto de Itaguaçu, pescaram primeiro o corpo de uma pequena imagem de terracota. Logo após, ao lançarem novamente as redes no mesmo local, resgataram a cabeça da mesma imagem.</p>
-                <p>Unindo as duas partes, viram que se tratava da Imagem da Imaculada Conceição. Imediatamente, ao lançarem novamente suas redes, elas encheram-se de peixes em abundância, no primeiro milagre da Virgem Aparecida.</p>
-            `,
+            <p>No ano de 1717, três pescadores — Filipe Pedroso, Domingos Garcia e João Alves — navegavam pelo Rio Paraíba do Sul. A pescaria estava muito escassa, e eles já desanimavam de conseguir peixes para o banquete do governador local.</p>
+            <p>Ao lançarem as redes no Porto de Itaguaçu, pescaram primeiro o corpo de uma pequena imagem de terracota. Logo após, ao lançarem novamente as redes no mesmo local, resgataram a cabeça da mesma imagem.</p>
+            <p>Unindo as duas partes, viram que se tratava da Imagem da Imaculada Conceição. Imediatamente, ao lançarem novamente suas redes, elas encheram-se de peixes em abundância, no primeiro milagre da Virgem Aparecida.</p>
+        `,
             rightContent: `
-                <h4 style="font-family:var(--font-serif); font-size:1.3rem; margin-bottom:10px; color:var(--marian-blue-light);">Reflexão & Propósito</h4>
-                <p>Deus se manifesta nas situações de escassez e cansaço. As redes vazias representam nossos corações desanimados; a Imagem quebrada e recolhida nos lembra que a Mãe Santíssima une nossas vidas fragmentadas e nos restaura.</p>
-                <p><strong>Propósito:</strong> Hoje, reze um mistério do terço oferecendo pelas suas maiores dificuldades de trabalho ou finanças familiares, confiando que a providência divina não faltará.</p>
-                <div class="verse">
-                    "Fazei tudo o que Ele vos disser." (João 2,5)
-                </div>
-            `
+            <h4 style="font-family:var(--font-serif); font-size:1.3rem; margin-bottom:10px; color:var(--marian-blue-light);">Reflexão & Propósito</h4>
+            <p>Deus se manifesta nas situações de escassez e cansaço. As redes vazias representam nossos corações desanimados; a Imagem quebrada e recolhida nos lembra que a Mãe Santíssima une nossas vidas fragmentadas e nos restaura.</p>
+            <p><strong>Propósito:</strong> Hoje, reze um mistério do terço oferecendo pelas suas maiores dificuldades de trabalho ou finanças familiares, confiando que a providência divina não faltará.</p>
+            <div class="verse">
+                "Fazei tudo o que Ele vos disser." (João 2,5)
+            </div>
+        `
         },
         {
             day: "Dia 2",
             title: "O Milagre das Velas",
             leftContent: `
-                <p>Após o resgate no rio, a imagem de Nossa Senhora Aparecida permaneceu na capela da humilde residência do pescador Filipe Pedroso. A vizinhança reunia-se todos os sábados à noite para rezar o Santo Terço em comunidade.</p>
-                <p>Em uma noite de oração fervorosa, as duas velas de cera que iluminavam a imagem da Virgem apagaram-se repentinamente, sem que houvesse qualquer brisa ou janela aberta no aposento.</p>
-                <p>Uma devota adiantou-se para reacendê-las, mas, antes de tocá-las com o fogo, as duas chamas voltaram a arder sozinhas espontaneamente na presença de todas as testemunhas.</p>
-            `,
+            <p>Após o resgate no rio, a imagem de Nossa Senhora Aparecida permaneceu na capela da humilde residência do pescador Filipe Pedroso. A vizinhança reunia-se todos os sábados à noite para rezar o Santo Terço em comunidade.</p>
+            <p>Em uma noite de oração fervorosa, as duas velas de cera que iluminavam a imagem da Virgem apagaram-se repentinamente, sem que houvesse qualquer brisa ou janela aberta no aposento.</p>
+            <p>Uma devota adiantou-se para reacendê-las, mas, antes de tocá-las com o fogo, as duas chamas voltaram a arder sozinhas espontaneamente na presença de todas as testemunhas.</p>
+        `,
             rightContent: `
-                <h4 style="font-family:var(--font-serif); font-size:1.3rem; margin-bottom:10px; color:var(--marian-blue-light);">Reflexão & Propósito</h4>
-                <p>A fé é a chama que ilumina nossa família. Mesmo que os ventos do mundo tentem apagar nossa esperança e devoção diária, Maria intercede junto a Deus para reacender a luz do Espírito Santo em nossos lares.</p>
-                <p><strong>Propósito:</strong> Reúna sua família ou tire um momento a sós no silêncio à noite para acender uma vela e rezar uma Ave-Maria pedindo paz e harmonia para seus familiares e parentes.</p>
-                <div class="verse">
-                    "O povo que andava nas trevas viu uma grande luz." (Isaías 9,2)
-                </div>
-            `
+            <h4 style="font-family:var(--font-serif); font-size:1.3rem; margin-bottom:10px; color:var(--marian-blue-light);">Reflexão & Propósito</h4>
+            <p>A fé é a chama que ilumina nossa família. Mesmo que os ventos do mundo tentem apagar nossa esperança e devoção diária, Maria intercede junto a Deus para reacender a luz do Espírito Santo em nossos lares.</p>
+            <p><strong>Propósito:</strong> Reúna sua família ou tire um momento a sós no silêncio à noite para acender uma vela e rezar uma Ave-Maria pedindo paz e harmonia para seus familiares e parentes.</p>
+            <div class="verse">
+                "O povo que andava nas trevas viu uma grande luz." (Isaías 9,2)
+            </div>
+        `
         },
         {
             day: "Dia 3",
             title: "A Libertação de Zacarias",
             leftContent: `
-                <p>Por volta de 1850, um escravizado chamado Zacarias, que havia fugido de uma fazenda, foi capturado por um feitor de escravos. Ao ser levado de volta acorrentado, ele passou em frente à antiga capela de Nossa Senhora Aparecida.</p>
-                <p>Zacarias implorou para fazer uma breve prece diante do altar. Ao se ajoelhar e começar a rezar fervorosamente com profunda contrição, as pesadas correntes de ferro caíram de seus braços e pescoço espontaneamente.</p>
-                <p>O feitor, profundamente tocado pelo prodígio divino, converteu-se à devoção mariana e comprou a liberdade definitiva de Zacarias, concedendo-lhe sua carta de alforria.</p>
-            `,
+            <p>Por volta de 1850, um escravizado chamado Zacarias, que havia fugido de uma fazenda, foi capturado por um feitor de escravos. Ao ser levado de volta acorrentado, ele passou em frente à antiga capela de Nossa Senhora Aparecida.</p>
+            <p>Zacarias implorou para fazer uma breve prece diante do altar. Ao se ajoelhar e começar a rezar fervorosamente com profunda contrição, as pesadas correntes de ferro caíram de seus braços e pescoço espontaneamente.</p>
+            <p>O feitor, profundamente tocado pelo prodígio divino, converteu-se à devoção mariana e comprou a liberdade definitiva de Zacarias, concedendo-lhe sua carta de alforria.</p>
+        `,
             rightContent: `
-                <h4 style="font-family:var(--font-serif); font-size:1.3rem; margin-bottom:10px; color:var(--marian-blue-light);">Reflexão & Propósito</h4>
-                <p>Nossa Senhora nos liberta de todas as algemas da alma: o pecado, o rancor, a ansiedade e o desespero. Diante do olhar materno de Maria, nenhuma corrente de maldade consegue se manter de pé em nossa vida.</p>
-                <p><strong>Propósito:</strong> Faça um exame de consciência hoje e identifique qual hábito nocivo, mágoa ou vício está prendendo sua liberdade espiritual. Entregue essa amarra à intercessão de Maria.</p>
-                <div class="verse">
-                    "Se o Filho vos libertar, sereis verdadeiramente livres." (João 8,36)
-                </div>
-            `
+            <h4 style="font-family:var(--font-serif); font-size:1.3rem; margin-bottom:10px; color:var(--marian-blue-light);">Reflexão & Propósito</h4>
+            <p>Nossa Senhora nos liberta de todas as algemas da alma: o pecado, o rancor, a ansiedade e o desespero. Diante do olhar materno de Maria, nenhuma corrente de maldade consegue se manter de pé em nossa vida.</p>
+            <p><strong>Propósito:</strong> Faça um exame de consciência hoje e identifique qual hábito nocivo, mágoa ou vício está prendendo sua liberdade espiritual. Entregue essa amarra à intercessão de Maria.</p>
+            <div class="verse">
+                "Se o Filho vos libertar, sereis verdadeiramente livres." (João 8,36)
+            </div>
+        `
+        },
+        {
+            day: "Dia 4",
+            title: "O Cavaleiro sem Fé",
+            leftContent: `
+            <p>Um orgulhoso cavaleiro de Cuiabá, de passagem por Aparecida, desdenhou da fé dos devotos que visitavam a capela da santa. Para provar que aquela devoção era uma farsa, ele decidiu entrar na igreja montado em seu cavalo.</p>
+            <p>Entretanto, ao tentar cruzar o portal do templo sagrado, as patas dianteiras de seu animal colaram-se milagrosamente na pedra da escadaria, impedindo qualquer movimento.</p>
+            <p>O cavaleiro, tomado de profundo temor de Deus e arrependimento, desmontou, ajoelhou-se e pediu perdão por sua audácia e falta de respeito ao sagrado, tornando-se um grande propagador do milagre.</p>
+        `,
+            rightContent: `
+            <h4 style="font-family:var(--font-serif); font-size:1.3rem; margin-bottom:10px; color:var(--marian-blue-light);">Reflexão & Propósito</h4>
+            <p>A arrogância tenta pisar nos mistérios divinos, mas a graça de Deus estabelece limites claros. O respeito ao templo e à fé simples das pessoas é agradável aos olhos do Senhor.</p>
+            <p><strong>Propósito:</strong> Hoje, faça um ato de humildade: evite julgar ou criticar a fé de qualquer pessoa, e peça a Maria que remova a soberba do seu próprio coração.</p>
+            <div class="verse">
+                "Deus resiste aos soberbos, mas dá graça aos humildes." (Tiago 4,6)
+            </div>
+        `
+        },
+        {
+            day: "Dia 5",
+            title: "A Cura da Menina Cega",
+            leftContent: `
+            <p>Uma menina cega de nascença, moradora de Jaboticabal, ouviu falar dos milagres de Nossa Senhora Aparecida e implorou à sua mãe que a levasse ao santuário da santa.</p>
+            <p>Após uma longa e cansativa viagem a pé e em lombo de burro, ao se aproximarem da colina onde estava a capela, a menina olhou em direção ao templo e disse admirada: 'Olha, mamãe, como aquela igreja é bonita!'</p>
+            <p>A mãe, chorando de alegria, percebeu que sua filha havia recebido a visão física naquele exato momento. A partir de então, a menina passou a enxergar perfeitamente.</p>
+        `,
+            rightContent: `
+            <h4 style="font-family:var(--font-serif); font-size:1.3rem; margin-bottom:10px; color:var(--marian-blue-light);">Reflexão & Propósito</h4>
+            <p>Nossa Senhora não apenas cura a cegueira física, mas deseja abrir os nossos olhos espirituais para as belezas e verdades do Evangelho de Jesus Cristo.</p>
+            <p><strong>Propósito:</strong> Peça a Maria a cura da sua 'cegueira espiritual'. Reze hoje pedindo a graça de enxergar as necessidades do seu próximo com maior clareza.</p>
+            <div class="verse">
+                "Abri-me os olhos para que eu contemple as maravilhas de vossa lei." (Salmo 118,18)
+            </div>
+        `
+        },
+        {
+            day: "Dia 6",
+            title: "O Menino no Rio",
+            leftContent: `
+            <p>Um menino que brincava às margens do Rio Paraíba do Sul escorregou e caiu em uma parte profunda da correnteza, sendo rapidamente arrastado por um violento redemoinho.</p>
+            <p>O pai do menino, que estava próximo e não sabia nadar bem, clamou em desespero: 'Nossa Senhora Aparecida, salvai meu filho!'</p>
+            <p>Imediatamente, o redemoinho parou de girar e a força da água empurrou o menino suavemente até a margem, onde ele foi resgatado são e salvo, sem qualquer ferimento.</p>
+        `,
+            rightContent: `
+            <h4 style="font-family:var(--font-serif); font-size:1.3rem; margin-bottom:10px; color:var(--marian-blue-light);">Reflexão & Propósito</h4>
+            <p>Nos redemoinhos da vida — ansiedades, medos e crises repentinas — o clamor da fé à Mãe de Deus tem o poder de acalmar as tempestades e nos trazer segurança espiritual.</p>
+            <p><strong>Propósito:</strong> Sempre que se sentir angustiado ou desamparado hoje, repita pausadamente a jaculatória: 'Nossa Senhora Aparecida, salvai-me e protegei-me!'</p>
+            <div class="verse">
+                "Invocai-me no dia da tribulação, eu vos livrarei." (Salmo 49,15)
+            </div>
+        `
+        },
+        {
+            day: "Dia 7",
+            title: "O Caçador e a Onça",
+            leftContent: `
+            <p>Um caçador que andava pelas matas do vale do Paraíba foi surpreendido por uma grande onça-pintada. Sem tempo para fugir, ele apontou sua espingarda para o animal.</p>
+            <p>No entanto, a arma falhou e o gatilho travou por três vezes consecutivas. Vendo-se desarmado e à mercê do animal feroz, ele ajoelhou-se e suplicou a proteção de Nossa Senhora Aparecida.</p>
+            <p>A onça, inexplicavelmente, acalmou-se, desviou o olhar do caçador e caminhou pacificamente de volta para a mata profunda, poupando a vida do homem.</p>
+        `,
+            rightContent: `
+            <h4 style="font-family:var(--font-serif); font-size:1.3rem; margin-bottom:10px; color:var(--marian-blue-light);">Reflexão & Propósito</h4>
+            <p>Existem situações em nossa jornada onde nossas defesas humanas falham por completo. É nesses momentos de total entrega que a proteção divina se torna nosso único e perfeito escudo.</p>
+            <p><strong>Propósito:</strong> Entregue nas mãos de Nossa Senhora aquele problema que parece insolúvel ou aquela situação que você não consegue controlar sozinho.</p>
+            <div class="verse">
+                "O Senhor é o meu auxílio e o meu escudo; nele confiou o meu coração." (Salmo 27,7)
+            </div>
+        `
+        },
+        {
+            day: "Dia 8",
+            title: "O Manto Imperial",
+            leftContent: `
+            <p>A Princesa Isabel, filha de Dom Pedro II, era uma devota fervorosa de Nossa Senhora Aparecida. Em 1868, ela visitou a capela da santa pela primeira vez, trazendo uma promessa em seu coração.</p>
+            <p>Ela ofertou à imagem um riquíssimo manto azul marinho, bordado a fios de ouro e decorado com pedras preciosas, que simbolizavam a realeza de Maria sobre o Brasil.</p>
+            <p>Este manto tornou-se a veste oficial da Imagem, marcando visualmente a profunda devoção da família imperial e do povo brasileiro à Padroeira.</p>
+        `,
+            rightContent: `
+            <h4 style="font-family:var(--font-serif); font-size:1.3rem; margin-bottom:10px; color:var(--marian-blue-light);">Reflexão & Propósito</h4>
+            <p>O manto azul de Maria nos cobre com sua doçura materna e nos protege contra as forças espirituais do mal. Vestir-se de Maria é revestir-se das virtudes de Cristo.</p>
+            <p><strong>Propósito:</strong> Reze hoje pedindo a Maria que o ajude a cobrir sua vida com a pureza, a modéstia e a caridade que seu manto simboliza.</p>
+            <div class="verse">
+                "Revestiram-se de mansidão e santidade." (Colossenses 3,12)
+            </div>
+        `
+        },
+        {
+            day: "Dia 9",
+            title: "A Coroa de Ouro",
+            leftContent: `
+            <p>Em 1884, retornando a Aparecida em agradecimento pelas graças de sua maternidade, a Princesa Isabel cumpriu a segunda parte de sua promessa e doou uma coroa de ouro maciço à Virgem.</p>
+            <p>A coroa imperial foi cravejada com brilhantes e coroou solenemente a imagem de Nossa Senhora Aparecida como Rainha e Padroeira do Brasil.</p>
+            <p>Esse gesto marcou o reconhecimento público da soberania espiritual de Maria sobre nossa nação, consolidando o amor do povo por sua Rainha Celeste.</p>
+        `,
+            rightContent: `
+            <h4 style="font-family:var(--font-serif); font-size:1.3rem; margin-bottom:10px; color:var(--marian-blue-light);">Reflexão & Propósito</h4>
+            <p>Maria reina servindo. Sua coroa não é de dominação, mas de amor, intercessão e misericórdia divina. Fazer de Maria nossa Rainha é colocar Jesus no centro de tudo.</p>
+            <p><strong>Propósito:</strong> Faça a oração da Salve Rainha hoje com profunda atenção, proclamando Maria como a soberana e protetora de sua vida familiar.</p>
+            <div class="verse">
+                "Apareceu no céu um grande sinal: uma mulher vestida do sol, com a lua debaixo dos seus pés, e uma coroa de doze estrelas sobre a cabeça." (Apocalipse 12,1)
+            </div>
+        `
+        },
+        {
+            day: "Dia 10",
+            title: "O Nome de Maria",
+            leftContent: `
+            <p>O nome de Maria, do hebraico 'Myrham', traz belos significados na tradição cristã, dentre os quais 'Estrela do Mar' e 'Senhora Iluminadora'.</p>
+            <p>Pronunciar o nome de Maria com fé e devoção afasta os pensamentos ruins, acalma a mente atribulada e convida a presença dos anjos guardiões ao nosso redor.</p>
+            <p>Os santos afirmam que o nome de Maria é mel aos ouvidos, doce no coração e força nos combates espirituais cotidianos.</p>
+        `,
+            rightContent: `
+            <h4 style="font-family:var(--font-serif); font-size:1.3rem; margin-bottom:10px; color:var(--marian-blue-light);">Reflexão & Propósito</h4>
+            <p>O nome da Mãe de Deus é um porto seguro para as almas atribuladas. Clamar por Maria nos direciona imediatamente ao amor de Jesus.</p>
+            <p><strong>Propósito:</strong> Sempre que sentir raiva, desânimo ou tentação hoje, pronuncie com amor o nome de Maria até que seu coração se acalme.</p>
+            <div class="verse">
+                "O nome da Virgem era Maria." (Lucas 1,27)
+            </div>
+        `
+        },
+        {
+            day: "Dia 11",
+            title: "A Pesca Abundante",
+            leftContent: `
+            <p>A abundância de peixes após o encontro da Imagem representa a generosidade de Deus em nossas vidas quando obedecemos à Sua Palavra.</p>
+            <p>Ao longo da história de devoção mariana no Brasil, os relatos de cura, conversão e libertação junto ao altar da Virgem de Itaguaçu continuam a se multiplicar diariamente.</p>
+            <p>Que esta meditação fortaleça a sua confiança filial na intercessão daquela que nunca desampara os seus filhos mais necessitados.</p>
+        `,
+            rightContent: `
+            <h4 style="font-family:var(--font-serif); font-size:1.3rem; margin-bottom:10px; color:var(--marian-blue-light);">Reflexão & Propósito</h4>
+            <p>A abundância de peixes após o encontro da Imagem representa a generosidade de Deus em nossas vidas quando obedecemos à Sua Palavra.</p>
+            <p><strong>Propósito:</strong> Reze pelas vocações sacerdotais e missionárias, para que tragam muitos peixes para a rede de Cristo.</p>
+            <div class="verse">
+                "Lançai a rede para o lado direito da barca e achareis." (João 21,6)
+            </div>
+        `
+        },
+        {
+            day: "Dia 12",
+            title: "A Imaculada Conceição",
+            leftContent: `
+            <p>Maria foi preservada do pecado original desde o primeiro instante de sua existência, sendo cheia de graça e pureza espiritual.</p>
+            <p>Ao longo da história de devoção mariana no Brasil, os relatos de cura, conversão e libertação junto ao altar da Virgem de Itaguaçu continuam a se multiplicar diariamente.</p>
+            <p>Que esta meditação fortaleça a sua confiança filial na intercessão daquela que nunca desampara os seus filhos mais necessitados.</p>
+        `,
+            rightContent: `
+            <h4 style="font-family:var(--font-serif); font-size:1.3rem; margin-bottom:10px; color:var(--marian-blue-light);">Reflexão & Propósito</h4>
+            <p>Maria foi preservada do pecado original desde o primeiro instante de sua existência, sendo cheia de graça e pureza espiritual.</p>
+            <p><strong>Propósito:</strong> Faça um ato de contrição hoje e planeje confessar-se nos próximos dias para purificar seu coração.</p>
+            <div class="verse">
+                "Tu és toda bela, ó minha amiga, e em ti não há mancha alguma." (Cânticos 4,7)
+            </div>
+        `
+        },
+        {
+            day: "Dia 13",
+            title: "As Águas do Rio Paraíba",
+            leftContent: `
+            <p>O rio, que outrora parecia estéril, tornou-se o berço de uma das maiores manifestações de fé mariana do mundo inteiro.</p>
+            <p>Ao longo da história de devoção mariana no Brasil, os relatos de cura, conversão e libertação junto ao altar da Virgem de Itaguaçu continuam a se multiplicar diariamente.</p>
+            <p>Que esta meditação fortaleça a sua confiança filial na intercessão daquela que nunca desampara os seus filhos mais necessitados.</p>
+        `,
+            rightContent: `
+            <h4 style="font-family:var(--font-serif); font-size:1.3rem; margin-bottom:10px; color:var(--marian-blue-light);">Reflexão & Propósito</h4>
+            <p>O rio, que outrora parecia estéril, tornou-se o berço de uma das maiores manifestações de fé mariana do mundo inteiro.</p>
+            <p><strong>Propósito:</strong> Agradeça a Deus pelas bênçãos escondidas nas aparentes perdas e desertos de sua vida.</p>
+            <div class="verse">
+                "Quem crer em mim, do seu interior correrão rios de água viva." (João 7,38)
+            </div>
+        `
+        },
+        {
+            day: "Dia 14",
+            title: "A Simplicidade do Barro",
+            leftContent: `
+            <p>A imagem é feita de terracota simples. Deus não escolheu o ouro para se manifestar em Aparecida, mas sim o barro humilde.</p>
+            <p>Ao longo da história de devoção mariana no Brasil, os relatos de cura, conversão e libertação junto ao altar da Virgem de Itaguaçu continuam a se multiplicar diariamente.</p>
+            <p>Que esta meditação fortaleça a sua confiança filial na intercessão daquela que nunca desampara os seus filhos mais necessitados.</p>
+        `,
+            rightContent: `
+            <h4 style="font-family:var(--font-serif); font-size:1.3rem; margin-bottom:10px; color:var(--marian-blue-light);">Reflexão & Propósito</h4>
+            <p>A imagem é feita de terracota simples. Deus não escolheu o ouro para se manifestar em Aparecida, mas sim o barro humilde.</p>
+            <p><strong>Propósito:</strong> Pratique a modéstia e a simplicidade em suas palavras e atitudes no dia de hoje.</p>
+            <div class="verse">
+                "Temos este tesouro em vasos de argila, para que se veja que este poder extraordinário pertence a Deus." (2 Coríntios 4,7)
+            </div>
+        `
+        },
+        {
+            day: "Dia 15",
+            title: "A Primeira Capela",
+            leftContent: `
+            <p>O lar dos pescadores foi o primeiro templo da santa. É na igreja doméstica da nossa casa que a devoção mariana deve começar.</p>
+            <p>Ao longo da história de devoção mariana no Brasil, os relatos de cura, conversão e libertação junto ao altar da Virgem de Itaguaçu continuam a se multiplicar diariamente.</p>
+            <p>Que esta meditação fortaleça a sua confiança filial na intercessão daquela que nunca desampara os seus filhos mais necessitados.</p>
+        `,
+            rightContent: `
+            <h4 style="font-family:var(--font-serif); font-size:1.3rem; margin-bottom:10px; color:var(--marian-blue-light);">Reflexão & Propósito</h4>
+            <p>O lar dos pescadores foi o primeiro templo da santa. É na igreja doméstica da nossa casa que a devoção mariana deve começar.</p>
+            <p><strong>Propósito:</strong> Abram um espaço em sua casa para rezar o terço em família ou faça um altar de oração hoje.</p>
+            <div class="verse">
+                "Eu e minha casa serviremos ao Senhor." (Josué 24,15)
+            </div>
+        `
+        },
+        {
+            day: "Dia 16",
+            title: "A Estrela da Evangelização",
+            leftContent: `
+            <p>Maria é aquela que aponta o caminho para Jesus. Propagar a devoção a Nossa Senhora é evangelizar e espalhar o amor de Cristo.</p>
+            <p>Ao longo da história de devoção mariana no Brasil, os relatos de cura, conversão e libertação junto ao altar da Virgem de Itaguaçu continuam a se multiplicar diariamente.</p>
+            <p>Que esta meditação fortaleça a sua confiança filial na intercessão daquela que nunca desampara os seus filhos mais necessitados.</p>
+        `,
+            rightContent: `
+            <h4 style="font-family:var(--font-serif); font-size:1.3rem; margin-bottom:10px; color:var(--marian-blue-light);">Reflexão & Propósito</h4>
+            <p>Maria é aquela que aponta o caminho para Jesus. Propagar a devoção a Nossa Senhora é evangelizar e espalhar o amor de Cristo.</p>
+            <p><strong>Propósito:</strong> Compartilhe uma mensagem de fé ou uma oração com um amigo ou familiar hoje.</p>
+            <div class="verse">
+                "Proclamai a sua glória entre as nações." (Salmo 95,3)
+            </div>
+        `
+        },
+        {
+            day: "Dia 17",
+            title: "A Arma do Santo Rosário",
+            leftContent: `
+            <p>O Rosário é a oração que agrada o coração de Maria e afasta os perigos de nossa alma e da nossa família.</p>
+            <p>Ao longo da história de devoção mariana no Brasil, os relatos de cura, conversão e libertação junto ao altar da Virgem de Itaguaçu continuam a se multiplicar diariamente.</p>
+            <p>Que esta meditação fortaleça a sua confiança filial na intercessão daquela que nunca desampara os seus filhos mais necessitados.</p>
+        `,
+            rightContent: `
+            <h4 style="font-family:var(--font-serif); font-size:1.3rem; margin-bottom:10px; color:var(--marian-blue-light);">Reflexão & Propósito</h4>
+            <p>O Rosário é a oração que agrada o coração de Maria e afasta os perigos de nossa alma e da nossa família.</p>
+            <p><strong>Propósito:</strong> Reze pelo menos uma dezena do terço hoje com especial atenção e devoção.</p>
+            <div class="verse">
+                "Perseveravam todos unanimemente na oração, com Maria, Mãe de Jesus." (Atos 1,14)
+            </div>
+        `
+        },
+        {
+            day: "Dia 18",
+            title: "A Intercessão em Caná",
+            leftContent: `
+            <p>Maria percebe as necessidades antes mesmo de pedirmos, como fez nas bodas de Caná quando o vinho faltou.</p>
+            <p>Ao longo da história de devoção mariana no Brasil, os relatos de cura, conversão e libertação junto ao altar da Virgem de Itaguaçu continuam a se multiplicar diariamente.</p>
+            <p>Que esta meditação fortaleça a sua confiança filial na intercessão daquela que nunca desampara os seus filhos mais necessitados.</p>
+        `,
+            rightContent: `
+            <h4 style="font-family:var(--font-serif); font-size:1.3rem; margin-bottom:10px; color:var(--marian-blue-light);">Reflexão & Propósito</h4>
+            <p>Maria percebe as necessidades antes mesmo de pedirmos, como fez nas bodas de Caná quando o vinho faltou.</p>
+            <p><strong>Propósito:</strong> Confie suas necessidades diárias à intercessão de Maria, sabendo que Ela cuidará de tudo.</p>
+            <div class="verse">
+                "Eles não têm mais vinho." (João 2,3)
+            </div>
+        `
+        },
+        {
+            day: "Dia 19",
+            title: "O Escudo de Proteção",
+            leftContent: `
+            <p>O manto de Nossa Senhora é um escudo espiritual que afasta as flechas do inimigo e as tentações diárias.</p>
+            <p>Ao longo da história de devoção mariana no Brasil, os relatos de cura, conversão e libertação junto ao altar da Virgem de Itaguaçu continuam a se multiplicar diariamente.</p>
+            <p>Que esta meditação fortaleça a sua confiança filial na intercessão daquela que nunca desampara os seus filhos mais necessitados.</p>
+        `,
+            rightContent: `
+            <h4 style="font-family:var(--font-serif); font-size:1.3rem; margin-bottom:10px; color:var(--marian-blue-light);">Reflexão & Propósito</h4>
+            <p>O manto de Nossa Senhora é um escudo espiritual que afasta as flechas do inimigo e as tentações diárias.</p>
+            <p><strong>Propósito:</strong> Peça a proteção dos santos anjos guardiões sobre a sua saúde física e espiritual hoje.</p>
+            <div class="verse">
+                "Debaixo da vossa proteção nos refugiamos, Santa Mãe de Deus."
+            </div>
+        `
+        },
+        {
+            day: "Dia 20",
+            title: "A Coroa da Glória Eterna",
+            leftContent: `
+            <p>Maria foi assunta ao céu e coroada pelo Pai como Rainha do Universo, mostrando o destino das almas fiéis.</p>
+            <p>Ao longo da história de devoção mariana no Brasil, os relatos de cura, conversão e libertação junto ao altar da Virgem de Itaguaçu continuam a se multiplicar diariamente.</p>
+            <p>Que esta meditação fortaleça a sua confiança filial na intercessão daquela que nunca desampara os seus filhos mais necessitados.</p>
+        `,
+            rightContent: `
+            <h4 style="font-family:var(--font-serif); font-size:1.3rem; margin-bottom:10px; color:var(--marian-blue-light);">Reflexão & Propósito</h4>
+            <p>Maria foi assunta ao céu e coroada pelo Pai como Rainha do Universo, mostrando o destino das almas fiéis.</p>
+            <p><strong>Propósito:</strong> Lembre-se da eternidade hoje. Nossas lutas nesta terra são temporárias, mas a recompensa celeste é eterna.</p>
+            <div class="verse">
+                "Recebereis a coroa da glória, que não desbota." (1 Pedro 5,4)
+            </div>
+        `
+        },
+        {
+            day: "Dia 21",
+            title: "Mãe da Santa Esperança",
+            leftContent: `
+            <p>Maria nos sustenta nos momentos em que a cruz se torna pesada, apontando sempre para o milagre da Ressurreição.</p>
+            <p>Ao longo da história de devoção mariana no Brasil, os relatos de cura, conversão e libertação junto ao altar da Virgem de Itaguaçu continuam a se multiplicar diariamente.</p>
+            <p>Que esta meditação fortaleça a sua confiança filial na intercessão daquela que nunca desampara os seus filhos mais necessitados.</p>
+        `,
+            rightContent: `
+            <h4 style="font-family:var(--font-serif); font-size:1.3rem; margin-bottom:10px; color:var(--marian-blue-light);">Reflexão & Propósito</h4>
+            <p>Maria nos sustenta nos momentos em que a cruz se torna pesada, apontando sempre para o milagre da Ressurreição.</p>
+            <p><strong>Propósito:</strong> Visite uma pessoa idosa, doente ou necessitada e leve uma palavra de esperança hoje.</p>
+            <div class="verse">
+                "A esperança não decepciona." (Romanos 5,5)
+            </div>
+        `
+        },
+        {
+            day: "Dia 22",
+            title: "Mãe de Misericórdia",
+            leftContent: `
+            <p>O coração de Maria é repleto de misericórdia para com todos os pecadores e desamparados da terra.</p>
+            <p>Ao longo da história de devoção mariana no Brasil, os relatos de cura, conversão e libertação junto ao altar da Virgem de Itaguaçu continuam a se multiplicar diariamente.</p>
+            <p>Que esta meditação fortaleça a sua confiança filial na intercessão daquela que nunca desampara os seus filhos mais necessitados.</p>
+        `,
+            rightContent: `
+            <h4 style="font-family:var(--font-serif); font-size:1.3rem; margin-bottom:10px; color:var(--marian-blue-light);">Reflexão & Propósito</h4>
+            <p>O coração de Maria é repleto de misericórdia para com todos os pecadores e desamparados da terra.</p>
+            <p><strong>Propósito:</strong> Pratique uma obra de misericórdia espiritual ou corporal no dia de hoje (dar um bom conselho, ajudar um necessitado).</p>
+            <div class="verse">
+                "Bem-aventurados os misericordiosos, porque alcançarão misericórdia." (Mateus 5,7)
+            </div>
+        `
+        },
+        {
+            day: "Dia 23",
+            title: "A Consagração Pessoal",
+            leftContent: `
+            <p>Consagrar-se a Maria é entregar todas as nossas ações e bens espirituais nas mãos da Mãe para que Ela os purifique.</p>
+            <p>Ao longo da história de devoção mariana no Brasil, os relatos de cura, conversão e libertação junto ao altar da Virgem de Itaguaçu continuam a se multiplicar diariamente.</p>
+            <p>Que esta meditação fortaleça a sua confiança filial na intercessão daquela que nunca desampara os seus filhos mais necessitados.</p>
+        `,
+            rightContent: `
+            <h4 style="font-family:var(--font-serif); font-size:1.3rem; margin-bottom:10px; color:var(--marian-blue-light);">Reflexão & Propósito</h4>
+            <p>Consagrar-se a Maria é entregar todas as nossas ações e bens espirituais nas mãos da Mãe para que Ela os purifique.</p>
+            <p><strong>Propósito:</strong> Renove sua consagração pessoal a Nossa Senhora rezando a oração da Consagração.</p>
+            <div class="verse">
+                "Sou todo vosso, ó Rainha e Mãe minha."
+            </div>
+        `
+        },
+        {
+            day: "Dia 24",
+            title: "A Igreja no Lar",
+            leftContent: `
+            <p>A família cristã é chamada a ser um santuário de oração, respeito e amor mútuo, imitando a Sagrada Família.</p>
+            <p>Ao longo da história de devoção mariana no Brasil, os relatos de cura, conversão e libertação junto ao altar da Virgem de Itaguaçu continuam a se multiplicar diariamente.</p>
+            <p>Que esta meditação fortaleça a sua confiança filial na intercessão daquela que nunca desampara os seus filhos mais necessitados.</p>
+        `,
+            rightContent: `
+            <h4 style="font-family:var(--font-serif); font-size:1.3rem; margin-bottom:10px; color:var(--marian-blue-light);">Reflexão & Propósito</h4>
+            <p>A família cristã é chamada a ser um santuário de oração, respeito e amor mútuo, imitando a Sagrada Família.</p>
+            <p><strong>Propósito:</strong> Evite discussões ou palavras ásperas em seu lar hoje, semeando a paz de Cristo.</p>
+            <div class="verse">
+                "A paz de Cristo reine em vossos corações." (Colossenses 3,15)
+            </div>
+        `
+        },
+        {
+            day: "Dia 25",
+            title: "O Silêncio Contemplativo",
+            leftContent: `
+            <p>Maria guardava todas as coisas em seu coração, ouvindo a voz de Deus no silêncio e na oração contínua.</p>
+            <p>Ao longo da história de devoção mariana no Brasil, os relatos de cura, conversão e libertação junto ao altar da Virgem de Itaguaçu continuam a se multiplicar diariamente.</p>
+            <p>Que esta meditação fortaleça a sua confiança filial na intercessão daquela que nunca desampara os seus filhos mais necessitados.</p>
+        `,
+            rightContent: `
+            <h4 style="font-family:var(--font-serif); font-size:1.3rem; margin-bottom:10px; color:var(--marian-blue-light);">Reflexão & Propósito</h4>
+            <p>Maria guardava todas as coisas em seu coração, ouvindo a voz de Deus no silêncio e na oração contínua.</p>
+            <p><strong>Propósito:</strong> Tire 5 minutos de silêncio absoluto hoje para escutar a Deus após ler a palavra.</p>
+            <div class="verse">
+                "Maria guardava todas estas coisas, meditando-as no seu coração." (Lucas 2,19)
+            </div>
+        `
+        },
+        {
+            day: "Dia 26",
+            title: "O Sim Generoso",
+            leftContent: `
+            <p>O 'Sim' de Maria ao plano de Deus trouxe o Salvador ao mundo. Nosso 'Sim' diário santifica nossa rotina.</p>
+            <p>Ao longo da história de devoção mariana no Brasil, os relatos de cura, conversão e libertação junto ao altar da Virgem de Itaguaçu continuam a se multiplicar diariamente.</p>
+            <p>Que esta meditação fortaleça a sua confiança filial na intercessão daquela que nunca desampara os seus filhos mais necessitados.</p>
+        `,
+            rightContent: `
+            <h4 style="font-family:var(--font-serif); font-size:1.3rem; margin-bottom:10px; color:var(--marian-blue-light);">Reflexão & Propósito</h4>
+            <p>O 'Sim' de Maria ao plano de Deus trouxe o Salvador ao mundo. Nosso 'Sim' diário santifica nossa rotina.</p>
+            <p><strong>Propósito:</strong> Aceite com paciência e amor os pequenos contratempos do dia de hoje, oferecendo como sacrifício a Deus.</p>
+            <div class="verse">
+                "Eis aqui a serva do Senhor; faça-se em mim segundo a vossa palavra." (Lucas 1,38)
+            </div>
+        `
+        },
+        {
+            day: "Dia 27",
+            title: "A Caridade sem Demora",
+            leftContent: `
+            <p>Ao saber da gravidez de Isabel, Maria partiu apressadamente para as montanhas para servir sua prima idosa.</p>
+            <p>Ao longo da história de devoção mariana no Brasil, os relatos de cura, conversão e libertação junto ao altar da Virgem de Itaguaçu continuam a se multiplicar diariamente.</p>
+            <p>Que esta meditação fortaleça a sua confiança filial na intercessão daquela que nunca desampara os seus filhos mais necessitados.</p>
+        `,
+            rightContent: `
+            <h4 style="font-family:var(--font-serif); font-size:1.3rem; margin-bottom:10px; color:var(--marian-blue-light);">Reflexão & Propósito</h4>
+            <p>Ao saber da gravidez de Isabel, Maria partiu apressadamente para as montanhas para servir sua prima idosa.</p>
+            <p><strong>Propósito:</strong> Seja solícito a ajudar alguém em sua casa ou no trabalho hoje antes mesmo que lhe peçam.</p>
+            <div class="verse">
+                "Naqueles dias, Maria partiu apressadamente para a região montanhosa."
+            </div>
+        `
+        },
+        {
+            day: "Dia 28",
+            title: "Maria, Rainha da Paz",
+            leftContent: `
+            <p>A Virgem Maria intercede para afastar a discórdia das famílias, das sociedades e do mundo inteiro.</p>
+            <p>Ao longo da história de devoção mariana no Brasil, os relatos de cura, conversão e libertação junto ao altar da Virgem de Itaguaçu continuam a se multiplicar diariamente.</p>
+            <p>Que esta meditação fortaleça a sua confiança filial na intercessão daquela que nunca desampara os seus filhos mais necessitados.</p>
+        `,
+            rightContent: `
+            <h4 style="font-family:var(--font-serif); font-size:1.3rem; margin-bottom:10px; color:var(--marian-blue-light);">Reflexão & Propósito</h4>
+            <p>A Virgem Maria intercede para afastar a discórdia das famílias, das sociedades e do mundo inteiro.</p>
+            <p><strong>Propósito:</strong> Peça perdão a alguém que você tenha magoado e reconcilie-se hoje.</p>
+            <div class="verse">
+                "Deixo-vos a paz, a minha paz vos dou." (João 14,27)
+            </div>
+        `
+        },
+        {
+            day: "Dia 29",
+            title: "De pé Junto à Cruz",
+            leftContent: `
+            <p>Maria permaneceu firme aos pés da Cruz de Jesus, unindo seu sofrimento ao sacrifício redentor do Filho.</p>
+            <p>Ao longo da história de devoção mariana no Brasil, os relatos de cura, conversão e libertação junto ao altar da Virgem de Itaguaçu continuam a se multiplicar diariamente.</p>
+            <p>Que esta meditação fortaleça a sua confiança filial na intercessão daquela que nunca desampara os seus filhos mais necessitados.</p>
+        `,
+            rightContent: `
+            <h4 style="font-family:var(--font-serif); font-size:1.3rem; margin-bottom:10px; color:var(--marian-blue-light);">Reflexão & Propósito</h4>
+            <p>Maria permaneceu firme aos pés da Cruz de Jesus, unindo seu sofrimento ao sacrifício redentor do Filho.</p>
+            <p><strong>Propósito:</strong> Suporte com fé e paciência os sofrimentos ou cansaços de hoje, unindo-os às dores de Jesus na cruz.</p>
+            <div class="verse">
+                "Junto à cruz de Jesus estava de pé sua mãe." (João 19,25)
+            </div>
+        `
+        },
+        {
+            day: "Dia 30",
+            title: "A Consagração do Brasil",
+            leftContent: `
+            <p>Consagramos nossa pátria, nossas famílias e nossas vidas à proteção eterna de Nossa Senhora Aparecida.</p>
+            <p>Ao longo da história de devoção mariana no Brasil, os relatos de cura, conversão e libertação junto ao altar da Virgem de Itaguaçu continuam a se multiplicar diariamente.</p>
+            <p>Que esta meditação fortaleça a sua confiança filial na intercessão daquela que nunca desampara os seus filhos mais necessitados.</p>
+        `,
+            rightContent: `
+            <h4 style="font-family:var(--font-serif); font-size:1.3rem; margin-bottom:10px; color:var(--marian-blue-light);">Reflexão & Propósito</h4>
+            <p>Consagramos nossa pátria, nossas famílias e nossas vidas à proteção eterna de Nossa Senhora Aparecida.</p>
+            <p><strong>Propósito:</strong> Faça uma oração sincera pelo progresso, pela paz e pela fé em nosso país.</p>
+            <div class="verse">
+                "Feliz a nação cujo Deus é o Senhor." (Salmo 32,12)
+            </div>
+        `
         }
     ],
 
