@@ -1287,13 +1287,26 @@ const app = {
         this.showToast(`📥 Iniciando download de: ${fileName}...`);
         
         setTimeout(() => {
+            // Caso especial: Marcadores de Bíblia gerados dinamicamente em alta resolução para impressão
+            if (fileName.includes('Marcadores')) {
+                this.generateBookmarksSheet((dataUrl) => {
+                    const link = document.createElement('a');
+                    link.href = dataUrl;
+                    link.download = 'Marcadores-de-Biblia-Impressao.png';
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                    this.showToast(`✅ Marcadores baixados para impressão!`);
+                });
+                return;
+            }
+
             let fileUrl = '';
             let finalFileName = fileName;
             
             // Se for imagem ou pôster, baixa a arte real ns_aparecida.png
             if (fileName.endsWith('.jpg') || fileName.endsWith('.png') || fileName.includes('Poster-Nossa-Senhora') || fileName.includes('Wallpaper')) {
                 fileUrl = 'assets/ns_aparecida.png';
-                // Garante que a extensão do arquivo seja de imagem (.png)
                 finalFileName = fileName.replace(/\.pdf$/, '.png').replace(/\.jpg$/, '.png');
             } else {
                 // Gera um arquivo de texto de demonstração e muda a extensão para .txt
@@ -1313,6 +1326,125 @@ const app = {
             
             this.showToast(`✅ Arquivo ${finalFileName} baixado com sucesso!`);
         }, 1000);
+    },
+
+    generateBookmarksSheet(callback) {
+        const canvas = document.createElement('canvas');
+        canvas.width = 1200;
+        canvas.height = 800;
+        const ctx = canvas.getContext('2d');
+        
+        // Fundo Creme
+        ctx.fillStyle = '#faf6ee';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        
+        // Título da Folha de Impressão
+        ctx.fillStyle = '#0b2545';
+        ctx.font = 'bold 32px Georgia';
+        ctx.textAlign = 'center';
+        ctx.fillText('Marcadores de Bíblia - Salvai-me Mãe Santíssima', canvas.width / 2, 60);
+        
+        ctx.fillStyle = '#64748b';
+        ctx.font = 'italic 16px sans-serif';
+        ctx.fillText('Instruções de Impressão: Imprima em papel de alta gramatura (ex: Opalina ou Couchê 240g), recorte nas bordas externas e dobre ao meio.', canvas.width / 2, 95);
+        
+        // Carrega imagem de Nossa Senhora
+        const img = new Image();
+        img.src = 'assets/ns_aparecida.png';
+        
+        const drawAll = () => {
+            // Desenha Frente do Marcador (Esquerda)
+            this.drawSingleBookmark(ctx, 240, 140, 320, 580, 'Salvai-me Rainha', 'São Bernardo', '“Nunca se ouviu dizer que algum daqueles que recorreu à vossa proteção fosse por Vós desamparado.”', img, true);
+            
+            // Desenha Verso do Marcador (Direita)
+            this.drawSingleBookmark(ctx, 640, 140, 320, 580, 'Consagração', 'São Luís de Montfort', '“Sou todo vosso, ó Rainha e Mãe minha, e tudo o que tenho vos pertence. Guardai-me como propriedade vossa.”', img, false);
+            
+            callback(canvas.toDataURL('image/png'));
+        };
+        
+        img.onload = drawAll;
+        img.onerror = drawAll;
+    },
+
+    drawSingleBookmark(ctx, x, y, w, h, title, author, quote, img, isFront) {
+        // Borda dourada externa
+        ctx.strokeStyle = '#d4af37';
+        ctx.lineWidth = 4;
+        ctx.strokeRect(x, y, w, h);
+        
+        // Borda pontilhada interna
+        ctx.strokeStyle = 'rgba(170, 124, 17, 0.3)';
+        ctx.lineWidth = 1;
+        ctx.setLineDash([4, 4]);
+        ctx.strokeRect(x + 8, y + 8, w - 16, h - 16);
+        ctx.setLineDash([]); // reset
+        
+        // Título do Marcador
+        ctx.fillStyle = '#0b2545';
+        ctx.font = 'bold 24px Georgia';
+        ctx.textAlign = 'center';
+        ctx.fillText(title, x + w/2, y + 45);
+        
+        // Cruz de Ouro
+        ctx.fillStyle = '#d4af37';
+        ctx.font = '28px Georgia';
+        ctx.fillText('†', x + w/2, y + 85);
+        
+        // Área da Arte
+        const artY = y + 115;
+        const artH = 190;
+        const artW = w - 40;
+        const artX = x + 20;
+        
+        if (isFront && img) {
+            ctx.save();
+            ctx.beginPath();
+            ctx.rect(artX, artY, artW, artH);
+            ctx.clip();
+            // centralizar imagem
+            ctx.drawImage(img, artX - 10, artY - 30, artW + 20, artH + 60);
+            ctx.restore();
+        } else {
+            // Desenho do Terço no Verso
+            ctx.fillStyle = 'rgba(212, 175, 55, 0.08)';
+            ctx.fillRect(artX, artY, artW, artH);
+            ctx.strokeStyle = 'rgba(212, 175, 55, 0.25)';
+            ctx.strokeRect(artX, artY, artW, artH);
+            
+            ctx.fillStyle = '#aa7c11';
+            ctx.font = '48px sans-serif';
+            ctx.fillText('📿', x + w/2, artY + artH/2 + 15);
+        }
+        
+        // Texto da Citação (com quebra de linha)
+        ctx.fillStyle = '#1e293b';
+        ctx.font = 'italic 16px Georgia';
+        this.wrapTextOnCanvas(ctx, quote, x + w/2, y + 360, w - 50, 24);
+        
+        // Autor da Citação no Rodapé
+        ctx.fillStyle = '#64748b';
+        ctx.font = 'bold 11px sans-serif';
+        ctx.fillText(author.toUpperCase(), x + w/2, y + h - 35);
+    },
+
+    wrapTextOnCanvas(ctx, text, x, y, maxWidth, lineHeight) {
+        const words = text.split(' ');
+        let line = '';
+        let currentY = y;
+        
+        for (let n = 0; n < words.length; n++) {
+            let testLine = line + words[n] + ' ';
+            let metrics = ctx.measureText(testLine);
+            let testWidth = metrics.width;
+            if (testWidth > maxWidth && n > 0) {
+                ctx.fillText(line, x, currentY);
+                line = words[n] + ' ';
+                currentY += lineHeight;
+            } else {
+                line = testLine;
+            }
+        }
+        ctx.fillText(line, x, currentY);
     },
 
     showToast(message) {
