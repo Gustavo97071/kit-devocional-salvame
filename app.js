@@ -1308,9 +1308,8 @@ const app = {
             if (fileName.endsWith('.jpg') || fileName.endsWith('.png') || fileName.includes('Poster-Nossa-Senhora') || fileName.includes('Wallpaper')) {
                 fileUrl = 'assets/ns_aparecida.png';
                 finalFileName = fileName.replace(/\.pdf$/, '.png').replace(/\.jpg$/, '.png');
-            } else {
                 // Gera um arquivo de texto de demonstração e muda a extensão para .txt
-                const content = `Associação Cultural Salvai-me Mãe Santíssima\n\nEste é o arquivo demonstrativo do seu Kit Devocional:\n- Nome do Material: ${fileName}\n\nNa versão final de produção do cliente, este link fará o download do arquivo PDF/ZIP completo contendo o material diagramado de 100+ páginas.`;
+                const content = `Associação Mãe Santíssima\n\nEste é o arquivo demonstrativo do seu Kit Devocional:\n- Nome do Material: ${fileName}\n\nNa versão final de produção do cliente, este link fará o download do arquivo PDF/ZIP completo contendo o material diagramado de 100+ páginas.`;
                 const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
                 fileUrl = URL.createObjectURL(blob);
                 finalFileName = fileName.replace(/\.pdf$/, '-Demonstracao.txt').replace(/\.zip$/, '-Demonstracao.txt');
