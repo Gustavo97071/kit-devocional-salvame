@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kit Devocional - Salvai-me Mãe Santíssima</title>
+    <meta name="description" content="Acesse o Kit Devocional completo do projeto Salvai-me Mãe Santíssima. Livros digitais, diários, terço interativo e artes exclusivas para fortalecer sua devoção marianista.">
+    <link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+
+    <div class="app-wrapper">
+        <!-- TOP NAVIGATION BAR -->
+        <nav class="top-navbar">
+            <div class="logo-container">
+                <span class="logo-cross">†</span>
+                <div class="logo-text">
+                    <span class="logo-title">Salvai-me <span class="logo-subtitle">Mãe Santíssima</span></span>
+                </div>
+            </div>
+            
+            <div class="nav-tabs">
+                <button class="nav-tab-btn active" id="tab-presentation" onclick="app.switchMainTab('presentation')">Apresentação do Kit</button>
+                <button class="nav-tab-btn" id="tab-portal" onclick="app.switchMainTab('portal')">Portal Devocional</button>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            
+            <!-- ==========================================
+                 VIEW 1: PRESENTATION LANDING PAGE
+                 ========================================== -->
+            <section id="view-presentation" class="view-section active">
+                
+                <!-- Hero Section -->
+                <header class="hero-section">
+                    <div class="hero-text">
+                        <span class="hero-tag">📂 Material Exclusivo</span>
+                        <h1 class="hero-title">Fortaleça sua Fé com o <span>Kit Devocional</span></h1>
+                        <p class="hero-desc">Um acervo completo de orações, meditações e artes sacras criado pela Associação Cultural Salvai-me Mãe Santíssima para abençoar o seu dia a dia e consagrar seu lar a Nossa Senhora Aparecida.</p>
+                        
+                        <div class="hero-ctas">
+                            <button class="btn-primary" onclick="app.switchMainTab('portal')">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+                                Acessar Área de Downloads
+                            </button>
+                            <button class="btn-secondary" onclick="app.scrollToGrid()">Conhecer o Kit</button>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-image-container">
+                        <div class="hero-mockup-frame">
+                            <img src="assets/ns_aparecida.png" alt="Nossa Senhora Aparecida - Padroeira do Brasil">
+                        </div>
+                    </div>
+                </header>
+
+                <!-- Section: What's inside the Kit -->
+                <section class="section-title-area" id="kit-details-section">
+                    <span class="section-tag">O que está incluído</span>
+                    <h2 class="section-headline">12 Materiais de <span>Extremo Valor Espiritual</span></h2>
+                </section>
+
+                <div class="kit-grid">
+                    <!-- Item 1 -->
+                    <div class="kit-card">
+                        <div class="card-icon">📘</div>
+                        <h3 class="card-title">30 Dias com N. Sra. Aparecida</h3>
+                        <p class="card-desc">Leituras diárias com meditações profundas, reflexões do evangelho e orações marianas consagradas.</p>
+                        <div class="card-meta">
+                            <span class="meta-pages">📖 150 páginas</span>
+                            <button class="card-btn" onclick="app.openPortalItem('ebook-30dias')">Ler Amostra →</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 2 -->
+                    <div class="kit-card">
+                        <div class="card-icon">📖</div>
+                        <h3 class="card-title">Livro de Orações Católicas</h3>
+                        <p class="card-desc">Uma coletânea riquíssima das mais belas orações da tradição da Igreja Católica para todas as horas.</p>
+                        <div class="card-meta">
+                            <span class="meta-pages">📖 100 páginas</span>
+                            <button class="card-btn" onclick="app.openPortalItem('livro-oracoes')">Rezar Agora →</button>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="kit-card">
+                        <div class="card-icon">📿</div>
+                        <h3 class="card-title">Guia Ilustrado do Santo Terço</h3>
+                        <p class="card-desc">Aprenda a rezar e meditar os mistérios do Rosário com nosso guia explicativo passo a passo.</p>
+                        <div class="card-meta">
+                            <span class="meta-pages">✨ Simulador Interativo</span>
+                            <button class="card-btn" onclick="app.openPortalItem('guia-terco')">Aprender →</button>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="kit-card">
+                        <div class="card-icon">🌹</div>
+                        <h3 class="card-title">Novena de Nossa Senhora</h3>
+                        <p class="card-desc">A tradicional novena de súplica e agradecimento para momentos de maior necessidade e fortalecimento.</p>
+                        <div class="card-meta">
+                            <span class="meta-pages">🙏 Orações Diárias</span>
+                            <button class="card-btn" onclick="app.openPortalItem('novena-aparecida')">Iniciar Novena →</button>
+                        </div>
+                    </div>
+
+                    <!-- Item 5 -->
+                    <div class="kit-card">
+                        <div class="card-icon">🙏</div>
+                        <h3 class="card-title">Diário Espiritual</h3>
+                        <p class="card-desc">Espaço íntimo para você anotar suas reflexões diárias, graças alcançadas e resoluções espirituais.</p>
+                        <div class="card-meta">
+                            <span class="meta-pages">✍️ Escrita Funcional</span>
+                            <button class="card-btn" onclick="app.openPortalItem('diario-espiritual')">Escrever Nota →</button>
+                        </div>
+                    </div>
+
+                    <!-- Item 6 -->
+                    <div class="kit-card">
+                        <div class="card-icon">📅</div>
+                        <h3 class="card-title">Calendário Litúrgico</h3>
+                        <p class="card-desc">Acompanhe as datas santas, os tempos litúrgicos e as principais celebrações marianas do ano.</p>
+                        <div class="card-meta">
+                            <span class="meta-pages">📅 Visualização Mensal</span>
+                            <button class="card-btn" onclick="app.openPortalItem('calendario-liturgico')">Ver Datas →</button>
+                        </div>
+                    </div>
+
+                    <!-- Item 7 -->
+                    <div class="kit-card">
+                        <div class="card-icon">🖼️</div>
+                        <h3 class="card-title">30 Wallpapers de Alta Resolução</h3>
+                        <p class="card-desc">Lindas artes devocionais para celular e desktop que manterão sua mente elevada a Deus em suas telas.</p>
+                        <div class="card-meta">
+                            <span class="meta-pages">📱 Mobile & Desktop</span>
+                            <button class="card-btn" onclick="app.openPortalItem('wallpapers')">Ver Galeria →</button>
+                        </div>
+                    </div>
+
+                    <!-- Item 8 -->
+                    <div class="kit-card">
+                        <div class="card-icon">🖼️</div>
+                        <h3 class="card-title">Pôsteres Imprimíveis A4 & A3</h3>
+                        <p class="card-desc">Artes prontas para impressão e enquadramento para decorar seu altar doméstico ou presentear.</p>
+                        <div class="card-meta">
+                            <span class="meta-pages">🖨️ PDF Alta Resolução</span>
+                            <button class="card-btn" onclick="app.openPortalItem('posters')">Ver Molduras →</button>
+                        </div>
+                    </div>
+
+                    <!-- Item 9 -->
+                    <div class="kit-card">
+                        <div class="card-icon">🔖</div>
+                        <h3 class="card-title">Marcadores de Bíblia</h3>
+                        <p class="card-desc">Modelos lindos para recortar, com versículos bíblicos e frases inspiradoras dos santos.</p>
+                        <div class="card-meta">
+                            <span class="meta-pages">✂️ Pronto para Imprimir</span>
+                            <button class="card-btn" onclick="app.openPortalItem('marcadores')">Visualizar →</button>
+                        </div>
+                    </div>
+
+                    <!-- Item 10 -->
+                    <div class="kit-card">
+                        <div class="card-icon">💌</div>
+                        <h3 class="card-title">Cartão de Agradecimento</h3>
+                        <p class="card-desc">Uma mensagem fraterna de nossa associação acolhendo você na família de devotos benfeitores.</p>
+                        <div class="card-meta">
+                            <span class="meta-pages">🤝 Vínculo de Oração</span>
+                            <button class="card-btn" onclick="app.openPortalItem('cartao-agradecimento')">Ler Carta →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer CTA -->
+                <section class="presentation-cta">
+                    <div class="presentation-cta-content">
+                        <h2>Consagre sua vida a <span>Mãe Aparecida</span></h2>
+                        <p>Nossa missão é levar a presença de Nossa Senhora a todos os lares do Brasil. Explore gratuitamente cada material digital em nossa área do devoto interativa.</p>
+                        <button class="btn-primary" onclick="app.switchMainTab('portal')">Acessar o Portal Devocional</button>
+                    </div>
+                </section>
+
+            </section>
+
+            <!-- ==========================================
+                 VIEW 2: PORTAL DEVOCIONAL / DELIVERABLE AREA
+                 ========================================== -->
+            <section id="view-portal" class="view-section">
+                <div class="portal-container">
+                    
+                    <!-- Left Sidebar Menu -->
+                    <aside class="portal-sidebar">
+                        <div class="sidebar-header">
+                            <h3 class="sidebar-title">Materiais do Kit</h3>
+                        </div>
+                        <ul class="sidebar-menu">
+                            <li>
+                                <button class="sidebar-link active" id="menu-ebook-30dias" onclick="app.switchPortalView('ebook-30dias')">
+                                    <span class="sidebar-icon">📘</span> 30 Dias Aparecida
+                                </button>
+                            </li>
+                            <li>
+                                <button class="sidebar-link" id="menu-livro-oracoes" onclick="app.switchPortalView('livro-oracoes')">
+                                    <span class="sidebar-icon">📖</span> Livro de Orações
+                                </button>
+                            </li>
+                            <li>
+                                <button class="sidebar-link" id="menu-guia-terco" onclick="app.switchPortalView('guia-terco')">
+                                    <span class="sidebar-icon">📿</span> Guia do Santo Terço
+                                </button>
+                            </li>
+                            <li>
+                                <button class="sidebar-link" id="menu-novena-aparecida" onclick="app.switchPortalView('novena-aparecida')">
+                                    <span class="sidebar-icon">🌹</span> Novena Aparecida
+                                </button>
+                            </li>
+                            <li>
+                                <button class="sidebar-link" id="menu-diario-espiritual" onclick="app.switchPortalView('diario-espiritual')">
+                                    <span class="sidebar-icon">🙏</span> Diário Espiritual
+                                </button>
+                            </li>
+                            <li>
+                                <button class="sidebar-link" id="menu-calendario-liturgico" onclick="app.switchPortalView('calendario-liturgico')">
+                                    <span class="sidebar-icon">📅</span> Calendário Litúrgico
+                                </button>
+                            </li>
+                            <li>
+                                <button class="sidebar-link" id="menu-wallpapers" onclick="app.switchPortalView('wallpapers')">
+                                    <span class="sidebar-icon">🖼️</span> 30 Wallpapers
+                                </button>
+                            </li>
+                            <li>
+                                <button class="sidebar-link" id="menu-posters" onclick="app.switchPortalView('posters')">
+                                    <span class="sidebar-icon">🖼️</span> Pôsteres A4 & A3
+                                </button>
+                            </li>
+                            <li>
+                                <button class="sidebar-link" id="menu-marcadores" onclick="app.switchPortalView('marcadores')">
+                                    <span class="sidebar-icon">🔖</span> Marcadores de Bíblia
+                                </button>
+                            </li>
+                            <li>
+                                <button class="sidebar-link" id="menu-cartao-agradecimento" onclick="app.switchPortalView('cartao-agradecimento')">
+                                    <span class="sidebar-icon">💌</span> Agradecimento
+                                </button>
+                            </li>
+                        </ul>
+                    </aside>
+
+                    <!-- Right Viewport -->
+                    <div class="portal-viewport">
+                        
+                        <!-- Portal View 1: 30 Dias Ebook -->
+                        <div class="portal-view active" id="port-ebook-30dias">
+                            <div class="portal-card">
+                                <div class="portal-header-row">
+                                    <div class="portal-title-group">
+                                        <h2>30 Dias com Nossa Senhora Aparecida</h2>
+                                        <span class="portal-subtitle">Livro Digital - Meditações Diárias</span>
+                                    </div>
+                                    <button class="btn-download-pdf" onclick="app.downloadFile('30-Dias-Com-Nossa-Senhora.pdf')">
+                                        📥 Baixar eBook Completo (PDF)
+                                    </button>
+                                </div>
+
+                                <div class="ebook-container">
+                                    <div class="book-spine">
+                                        <!-- Left Page (Dynamic Meditation) -->
+                                        <div class="book-page book-page-left">
+                                            <div class="book-page-header">
+                                                <span id="ebook-day-title-left">Dia 1</span>
+                                                <span>Meditação</span>
+                                            </div>
+                                            <div class="book-page-content" id="ebook-page-content-left">
+                                                <!-- Dynamic Content from JS -->
+                                            </div>
+                                            <div class="book-page-footer">
+                                                <span id="ebook-page-number-left">Página 2</span>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Right Page (Dynamic Prayer & Action) -->
+                                        <div class="book-page book-page-right">
+                                            <div class="book-page-header">
+                                                <span id="ebook-day-title-right">Dia 1</span>
+                                                <span>Oração & Prática</span>
+                                            </div>
+                                            <div class="book-page-content" id="ebook-page-content-right">
+                                                <!-- Dynamic Content from JS -->
+                                            </div>
+                                            <div class="book-page-footer">
+                                                <span id="ebook-page-number-right">Página 3</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="book-controls">
+                                        <button class="btn-book-nav" id="btn-prev-day" onclick="app.changeEbookDay(-1)">←</button>
+                                        <span class="page-indicator" id="ebook-day-indicator">Dia 1 de 3</span>
+                                        <button class="btn-book-nav" id="btn-next-day" onclick="app.changeEbookDay(1)">→</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Portal View 2: Livro de Orações -->
+                        <div class="portal-view" id="port-livro-oracoes">
+                            <div class="portal-card">
+                                <div class="portal-header-row">
+                                    <div class="portal-title-group">
+                                        <h2>Livro de Orações Católicas</h2>
+                                        <span class="portal-subtitle">Seu devocionário digital completo</span>
+                                    </div>
+                                    <button class="btn-download-pdf" onclick="app.downloadFile('Livro-de-Oracoes-Catolicas.pdf')">
+                                        📥 Baixar Livro Completo (PDF)
+                                    </button>
+                                </div>
+
+                                <div class="prayers-layout">
+                                    <div class="prayers-filters">
+                                        <button class="filter-pill active" onclick="app.filterPrayers('all', this)">Todas</button>
+                                        <button class="filter-pill" onclick="app.filterPrayers('marianas', this)">Marianas</button>
+                                        <button class="filter-pill" onclick="app.filterPrayers('diarias', this)">Diárias</button>
+                                        <button class="filter-pill" onclick="app.filterPrayers('santos', this)">Santos / Diversas</button>
+                                    </div>
+                                    
+                                    <div class="prayers-search-bar">
+                                        <span class="prayers-search-icon">🔍</span>
+                                        <input type="text" class="prayers-search-input" id="search-prayers" placeholder="Buscar oração pelo nome..." oninput="app.searchPrayers()">
+                                    </div>
+
+                                    <div class="prayer-grid" id="prayers-list-container">
+                                        <!-- Dynamic list of prayers -->
+                                    </div>
+
+                                    <!-- Prayer text viewing area -->
+                                    <div class="prayer-display-modal" id="prayer-display-area">
+                                        <button class="prayer-display-close" onclick="app.closePrayerDisplay()">×</button>
+                                        <h3 class="prayer-display-title" id="displayed-prayer-title">Título</h3>
+                                        <div class="prayer-display-content" id="displayed-prayer-text">
+                                            Texto
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Portal View 3: Santo Terço Simulator -->
+                        <div class="portal-view" id="port-guia-terco">
+                            <div class="portal-card">
+                                <div class="portal-header-row">
+                                    <div class="portal-title-group">
+                                        <h2>Guia Ilustrado do Santo Terço</h2>
+                                        <span class="portal-subtitle">Medite os mistérios de Cristo passo a passo</span>
+                                    </div>
+                                    <button class="btn-download-pdf" onclick="app.downloadFile('Guia-do-Santo-Terco.pdf')">
+                                        📥 Baixar Guia (PDF)
+                                    </button>
+                                </div>
+
+                                <div class="terco-layout">
+                                    
+                                    <!-- Interactive Bead loop (SVG representation) -->
+                                    <div class="terco-canvas-area">
+                                        <svg class="terco-svg-container" viewBox="0 0 300 400" id="terco-svg">
+                                            <!-- Crux -->
+                                            <path class="bead bead-crucifix" id="bead-0" d="M 144 380 L 156 380 L 156 350 L 168 350 L 168 340 L 156 340 L 156 325 L 144 325 L 144 340 L 132 340 L 132 350 L 144 350 Z" onclick="app.selectBead(0)"/>
+                                            
+                                            <!-- First beads (Pai Nosso and Ave Marias) -->
+                                            <circle class="bead bead-pai" id="bead-1" cx="150" cy="305" r="7" onclick="app.selectBead(1)"/>
+                                            <circle class="bead bead-ave" id="bead-2" cx="150" cy="285" r="5" onclick="app.selectBead(2)"/>
+                                            <circle class="bead bead-ave" id="bead-3" cx="150" cy="270" r="5" onclick="app.selectBead(3)"/>
+                                            <circle class="bead bead-ave" id="bead-4" cx="150" cy="255" r="5" onclick="app.selectBead(4)"/>
+                                            <circle class="bead bead-pai" id="bead-5" cx="150" cy="235" r="7" onclick="app.selectBead(5)"/>
+                                            
+                                            <!-- Medal -->
+                                            <polygon class="bead bead-medal" id="bead-6" points="144,215 156,215 150,200" onclick="app.selectBead(6)"/>
+                                            
+                                            <!-- The Loop (a representative small loop of 10 beads + start of mysts to keep layout simple and highly usable) -->
+                                            <!-- 1st Decade (Aves) -->
+                                            <circle class="bead bead-ave" id="bead-7" cx="130" cy="180" r="5.5" onclick="app.selectBead(7)"/>
+                                            <circle class="bead bead-ave" id="bead-8" cx="110" cy="165" r="5.5" onclick="app.selectBead(8)"/>
+                                            <circle class="bead bead-ave" id="bead-9" cx="95" cy="145" r="5.5" onclick="app.selectBead(9)"/>
+                                            <circle class="bead bead-ave" id="bead-10" cx="85" cy="120" r="5.5" onclick="app.selectBead(10)"/>
+                                            <circle class="bead bead-ave" id="bead-11" cx="80" cy="95" r="5.5" onclick="app.selectBead(11)"/>
+                                            
+                                            <!-- Decade joint -->
+                                            <circle class="bead bead-pai" id="bead-12" cx="90" cy="65" r="7" onclick="app.selectBead(12)"/>
+                                            
+                                            <!-- 2nd Decade (Aves top loop) -->
+                                            <circle class="bead bead-ave" id="bead-13" cx="110" cy="45" r="5.5" onclick="app.selectBead(13)"/>
+                                            <circle class="bead bead-ave" id="bead-14" cx="130" cy="35" r="5.5" onclick="app.selectBead(14)"/>
+                                            <circle class="bead bead-ave" id="bead-15" cx="150" cy="32" r="5.5" onclick="app.selectBead(15)"/>
+                                            <circle class="bead bead-ave" id="bead-16" cx="170" cy="35" r="5.5" onclick="app.selectBead(16)"/>
+                                            <circle class="bead bead-ave" id="bead-17" cx="190" cy="45" r="5.5" onclick="app.selectBead(17)"/>
+                                            
+                                            <!-- Decade joint -->
+                                            <circle class="bead bead-pai" id="bead-18" cx="210" cy="65" r="7" onclick="app.selectBead(18)"/>
+                                            
+                                            <!-- 3rd Decade (Aves right loop) -->
+                                            <circle class="bead bead-ave" id="bead-19" cx="220" cy="95" r="5.5" onclick="app.selectBead(19)"/>
+                                            <circle class="bead bead-ave" id="bead-20" cx="215" cy="120" r="5.5" onclick="app.selectBead(20)"/>
+                                            <circle class="bead bead-ave" id="bead-21" cx="205" cy="145" r="5.5" onclick="app.selectBead(21)"/>
+                                            <circle class="bead bead-ave" id="bead-22" cx="190" cy="165" r="5.5" onclick="app.selectBead(22)"/>
+                                            <circle class="bead bead-ave" id="bead-23" cx="170" cy="180" r="5.5" onclick="app.selectBead(23)"/>
+                                            
+                                            <!-- Connect lines back to medal -->
+                                            <line x1="170" y1="180" x2="150" y2="200" stroke="#aa7c11" stroke-width="1" stroke-dasharray="3"/>
+                                            <line x1="130" y1="180" x2="150" y2="200" stroke="#aa7c11" stroke-width="1" stroke-dasharray="3"/>
+                                            
+                                            <text x="150" y="228" font-size="10" fill="#aa7c11" text-anchor="middle" font-weight="bold">†</text>
+                                        </svg>
+                                        
+                                        <p style="position: absolute; bottom: 10px; font-size: 0.75rem; color: var(--text-muted); text-align: center; width: 90%;">
+                                            Clique nas contas do terço acima para acompanhar as orações passo a passo.
+                                        </p>
+                                    </div>
+
+                                    <!-- Guide text panel -->
+                                    <div class="terco-guide-panel">
+                                        <div class="mystery-selector-box">
+                                            <label for="mystery-select" style="font-weight: 600; font-size: 0.9rem; color: var(--marian-blue-light); display: block; margin-bottom: 5px;">Mistérios do Dia:</label>
+                                            <select id="mystery-select" class="mystery-select" onchange="app.changeMysteries(this.value)">
+                                                <option value="gozosos">Mistérios Gozosos (Segunda e Sábado)</option>
+                                                <option value="luminosos">Mistérios Luminosos (Quinta-feira)</option>
+                                                <option value="dolorosos">Mistérios Dolorosos (Terça e Sexta-feira)</option>
+                                                <option value="gloriosos">Mistérios Gloriosos (Quarta-feira e Domingo)</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="terco-display-card">
+                                            <div>
+                                                <div class="terco-step-info" id="terco-step-info">Início do Terço</div>
+                                                <div class="terco-mystery-title" id="terco-mystery-title">Pelo Sinal da Santa Cruz</div>
+                                                <div class="terco-prayer-text" id="terco-prayer-text">
+                                                    Pelo sinal da Santa Cruz, livrai-nos, Deus, nosso Senhor, dos nossos inimigos. Em nome do Pai, e do Filho, e do Espírito Santo. Amém.
+                                                </div>
+                                            </div>
+
+                                            <div class="terco-actions">
+                                                <button class="btn-terco-nav" onclick="app.navigateTerco(-1)">Anterior</button>
+                                                <span class="terco-progress-label" id="terco-progress-label">Conta 1 / 24</span>
+                                                <button class="btn-terco-nav" onclick="app.navigateTerco(1)">Próximo</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Portal View 4: Novena de Nossa Senhora -->
+                        <div class="portal-view" id="port-novena-aparecida">
+                            <div class="portal-card">
+                                <div class="portal-header-row">
+                                    <div class="portal-title-group">
+                                        <h2>Novena de Nossa Senhora Aparecida</h2>
+                                        <span class="portal-subtitle">Prepare o seu coração para o dia da Padroeira</span>
+                                    </div>
+                                    <button class="btn-download-pdf" onclick="app.downloadFile('Novena-Nossa-Senhora-Aparecida.pdf')">
+                                        📥 Baixar Novena (PDF)
+                                    </button>
+                                </div>
+
+                                <div class="ebook-container">
+                                    <div class="book-spine">
+                                        <!-- Left Page: Prayers of everyday -->
+                                        <div class="book-page book-page-left">
+                                            <div class="book-page-header">
+                                                <span>Súplica Diária</span>
+                                                <span>Abertura</span>
+                                            </div>
+                                            <div class="book-title-tag" style="font-size: 1.8rem;">Oração Inicial da Novena</div>
+                                            <div class="book-page-content" style="font-size: 1.05rem;">
+                                                <p>Ó Mãe querida, Rainha dos céus e da terra, sob o vosso patrocínio iniciamos estes dias de oração. Nós vos pedimos com filial devoção: volvei o vosso olhar carinhoso sobre o povo brasileiro.</p>
+                                                <p>Por vosso intermédio, apresentamos a Jesus nossas alegrias e angústias. Escutai com benevolência a nossa súplica e obtende-nos a graça de que tanto necessitamos nesta novena...</p>
+                                                <p><em>(Faça em silêncio seu pedido pessoal)</em></p>
+                                            </div>
+                                            <div class="book-page-footer">
+                                                <span>Rezar todos os dias</span>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Right Page: Day-specific meditation -->
+                                        <div class="book-page book-page-right">
+                                            <div class="book-page-header">
+                                                <span id="novena-day-title">Dia 1</span>
+                                                <span>Meditação</span>
+                                            </div>
+                                            <div class="book-page-content" id="novena-page-content" style="font-size: 1.05rem;">
+                                                <!-- Dynamic content from JS -->
+                                            </div>
+                                            <div class="book-page-footer">
+                                                <span id="novena-page-number">Missa Solene</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="book-controls">
+                                        <button class="btn-book-nav" id="btn-prev-novena" onclick="app.changeNovenaDay(-1)">←</button>
+                                        <span class="page-indicator" id="novena-day-indicator">Dia 1 de 9</span>
+                                        <button class="btn-book-nav" id="btn-next-novena" onclick="app.changeNovenaDay(1)">→</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Portal View 5: Diário Espiritual -->
+                        <div class="portal-view" id="port-diario-espiritual">
+                            <div class="portal-card">
+                                <div class="portal-header-row">
+                                    <div class="portal-title-group">
+                                        <h2>Diário Espiritual</h2>
+                                        <span class="portal-subtitle">Escreva e registre suas reflexões de oração</span>
+                                    </div>
+                                    <button class="btn-download-pdf" onclick="app.downloadFile('Diario-Espiritual-Modelo.pdf')">
+                                        📥 Baixar Diário Imprimível (PDF)
+                                    </button>
+                                </div>
+
+                                <div class="diary-layout">
+                                    
+                                    <!-- Editor block -->
+                                    <div class="diary-editor-box">
+                                        <label for="diary-prompt" style="font-weight: 600; font-size: 0.9rem; color: var(--marian-blue-light);">Escolha um tema ou inspiração:</label>
+                                        <select id="diary-prompt" class="diary-select-prompt" onchange="app.applyDiaryPrompt(this.value)">
+                                            <option value="">-- Começar com folha em branco --</option>
+                                            <option value="Agradecimento pelas graças recebidas hoje...">Gratidão diária</option>
+                                            <option value="Minhas principais intenções de oração hoje são...">Intenções de oração</option>
+                                            <option value="O que Deus me falou através da leitura litúrgica de hoje foi...">Reflexão da palavra</option>
+                                            <option value="Minha resolução concreta para viver a caridade cristã esta semana é...">Resolução de virtude</option>
+                                        </select>
+                                        
+                                        <textarea class="diary-textarea" id="diary-text" placeholder="Escreva aqui suas reflexões, preces e agradecimentos diários..."></textarea>
+                                        
+                                        <div class="diary-actions">
+                                            <button class="btn-primary" onclick="app.saveDiaryEntry()">💾 Salvar Reflexão</button>
+                                        </div>
+                                    </div>
+
+                                    <!-- History sidebar -->
+                                    <div class="diary-history-box">
+                                        <h3 class="diary-history-title">Suas Anotações</h3>
+                                        <div class="diary-history-list" id="diary-entries-container">
+                                            <!-- Saved notes in localStorage will render here -->
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Portal View 6: Calendário Litúrgico -->
+                        <div class="portal-view" id="port-calendario-liturgico">
+                            <div class="portal-card">
+                                <div class="portal-header-row">
+                                    <div class="portal-title-group">
+                                        <h2>Calendário Litúrgico Mariano</h2>
+                                        <span class="portal-subtitle">Acompanhe as cores e festas da Igreja</span>
+                                    </div>
+                                    <button class="btn-download-pdf" onclick="app.downloadFile('Calendario-Liturgico.pdf')">
+                                        📥 Baixar Calendário Completo
+                                    </button>
+                                </div>
+
+                                <div class="calendar-layout">
+                                    
+                                    <div class="calendar-header-row">
+                                        <button class="btn-book-nav" onclick="app.changeMonth(-1)">←</button>
+                                        <h3 class="calendar-month-title" id="calendar-month-year">Outubro 2026</h3>
+                                        <button class="btn-book-nav" onclick="app.changeMonth(1)">→</button>
+                                    </div>
+
+                                    <!-- Calendar Grid -->
+                                    <div class="calendar-grid-container">
+                                        <div class="calendar-grid" id="calendar-grid-body">
+                                            <!-- Headers and cells from JS -->
+                                        </div>
+                                    </div>
+
+                                    <!-- Liturgical Seasons Legend -->
+                                    <div class="liturgical-legend">
+                                        <div class="legend-item">
+                                            <span class="liturgy-dot green"></span>
+                                            <span>Tempo Comum (Verde)</span>
+                                        </div>
+                                        <div class="legend-item">
+                                            <span class="liturgy-dot white"></span>
+                                            <span>Festas e Solenidades (Branco)</span>
+                                        </div>
+                                        <div class="legend-item">
+                                            <span class="liturgy-dot violet"></span>
+                                            <span>Advento e Quaresma (Roxo)</span>
+                                        </div>
+                                        <div class="legend-item">
+                                            <span class="liturgy-dot red"></span>
+                                            <span>Mártires e Pentecostes (Vermelho)</span>
+                                        </div>
+                                        <div class="legend-item">
+                                            <span class="liturgy-dot rose"></span>
+                                            <span>Domingo Gaudete e Laetare (Rosa)</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Day detailed view card -->
+                                    <div class="calendar-detail-card" id="calendar-day-details">
+                                        <h4 id="detail-day-date" style="font-family: var(--font-sans); font-weight: bold; margin-bottom: 5px; color: var(--gold-dark);">12 de Outubro</h4>
+                                        <p id="detail-day-liturgy" style="font-family: var(--font-serif); font-size: 1.25rem; font-weight: bold; color: var(--marian-blue); margin-bottom: 10px;">SOLENIDADE DE NOSSA SENHORA APARECIDA</p>
+                                        <p id="detail-day-description" style="color: var(--text-dark); font-size: 0.95rem;">Padroeira Principal do Brasil. Dia de prece nacional e união em oração sob o manto azul marinho da Virgem Maria.</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Portal View 7: 30 Wallpapers -->
+                        <div class="portal-view" id="port-wallpapers">
+                            <div class="portal-card">
+                                <div class="portal-header-row">
+                                    <div class="portal-title-group">
+                                        <h2>30 Wallpapers Exclusivos</h2>
+                                        <span class="portal-subtitle">Inspiração sacra e marianista em todas as suas telas</span>
+                                    </div>
+                                    <button class="btn-download-pdf" onclick="app.downloadFile('Kit-Todos-Wallpapers.zip')">
+                                        📥 Baixar Todos (.zip)
+                                    </button>
+                                </div>
+
+                                <div class="gallery-grid">
+                                    <!-- Wallpaper 1 -->
+                                    <div class="wallpaper-card">
+                                        <div class="wallpaper-preview">
+                                            <div class="smartphone-mockup-frame">
+                                                <img src="assets/ns_aparecida.png" alt="Manto de Estrelas">
+                                            </div>
+                                        </div>
+                                        <div class="wallpaper-info">
+                                            <div class="wallpaper-title">Manto de Estrelas</div>
+                                            <div class="wallpaper-meta">Mobile (Smartphone)</div>
+                                            <button class="btn-download-asset" onclick="app.downloadFile('Wallpaper-Manto-Estrelas-Mobile.jpg')">📥 Download</button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Wallpaper 2 -->
+                                    <div class="wallpaper-card">
+                                        <div class="wallpaper-preview">
+                                            <div class="desktop-mockup-frame">
+                                                <img src="assets/ns_aparecida.png" alt="Padroeira do Brasil">
+                                            </div>
+                                        </div>
+                                        <div class="wallpaper-info">
+                                            <div class="wallpaper-title">Padroeira do Brasil</div>
+                                            <div class="wallpaper-meta">Desktop (Computador)</div>
+                                            <button class="btn-download-asset" onclick="app.downloadFile('Wallpaper-Padroeira-Desktop.jpg')">📥 Download</button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Wallpaper 3 -->
+                                    <div class="wallpaper-card">
+                                        <div class="wallpaper-preview" style="background: linear-gradient(135deg, var(--marian-blue-dark), var(--gold-dark));">
+                                            <div class="smartphone-mockup-frame">
+                                                <div style="width:100%; height:100%; display:flex; justify-content:center; align-items:center; color:#fff; font-size:4rem; font-family: var(--font-serif);">†</div>
+                                            </div>
+                                        </div>
+                                        <div class="wallpaper-info">
+                                            <div class="wallpaper-title">Cruz Imperial Gold</div>
+                                            <div class="wallpaper-meta">Mobile (Smartphone)</div>
+                                            <button class="btn-download-asset" onclick="app.downloadFile('Wallpaper-Cruz-Gold-Mobile.jpg')">📥 Download</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Portal View 8: Posters -->
+                        <div class="portal-view" id="port-posters">
+                            <div class="portal-card">
+                                <div class="portal-header-row">
+                                    <div class="portal-title-group">
+                                        <h2>Pôsteres Imprimíveis A4 & A3</h2>
+                                        <span class="portal-subtitle">Decore seu altar doméstico ou seu quarto com arte sacra</span>
+                                    </div>
+                                    <button class="btn-download-pdf" onclick="app.downloadFile('Kit-Posters-A3-A4.zip')">
+                                        📥 Baixar Todos (.zip)
+                                    </button>
+                                </div>
+
+                                <div class="gallery-grid" style="grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));">
+                                    <!-- Poster 1 -->
+                                    <div class="wallpaper-card">
+                                        <div class="wallpaper-preview" style="height: 280px;">
+                                            <div class="poster-mockup-frame">
+                                                <img src="assets/ns_aparecida.png" alt="Pôster Oficial">
+                                            </div>
+                                        </div>
+                                        <div class="wallpaper-info">
+                                            <div class="wallpaper-title">Pôster Oficial Nossa Senhora</div>
+                                            <div class="wallpaper-meta">Disponível em A3 e A4 (300 DPI)</div>
+                                            <button class="btn-download-asset" onclick="app.downloadFile('Poster-Nossa-Senhora-Alta.pdf')">📥 Baixar PDF para Impressão</button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Poster 2 -->
+                                    <div class="wallpaper-card">
+                                        <div class="wallpaper-preview" style="height: 280px; background: #faf6ee;">
+                                            <div class="poster-mockup-frame" style="border-color: #3b2c15;">
+                                                <div style="padding: 20px; text-align: center; font-family: var(--font-serif); color: var(--marian-blue);">
+                                                    <span style="font-size: 1.6rem; display:block; margin-bottom: 10px;">†</span>
+                                                    <span style="font-style: italic; font-size: 0.95rem;">"Sob o vosso manto, ó Mãe Santíssima, encontramos refúgio."</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="wallpaper-info">
+                                            <div class="wallpaper-title">Pôster Consagração do Lar</div>
+                                            <div class="wallpaper-meta">Disponível em A3 e A4 (300 DPI)</div>
+                                            <button class="btn-download-asset" onclick="app.downloadFile('Poster-Consagracao-Alta.pdf')">📥 Baixar PDF para Impressão</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Portal View 9: Marcadores de Bíblia -->
+                        <div class="portal-view" id="port-marcadores">
+                            <div class="portal-card">
+                                <div class="portal-header-row">
+                                    <div class="portal-title-group">
+                                        <h2>Marcadores de Bíblia</h2>
+                                        <span class="portal-subtitle">Imprima e recorte marcadores com frases de santos e versículos</span>
+                                    </div>
+                                    <button class="btn-download-pdf" onclick="app.downloadFile('Marcadores-de-Biblia.pdf')">
+                                        📥 Baixar PDF de Corte
+                                    </button>
+                                </div>
+
+                                <div class="bookmark-mockup-container">
+                                    <!-- Bookmark 1 Front -->
+                                    <div class="bookmark-card-front">
+                                        <div class="bookmark-header">Salvai-me Rainha</div>
+                                        <div class="bookmark-symbol">†</div>
+                                        <div class="bookmark-art">
+                                            <img src="assets/ns_aparecida.png" alt="Marcador Art">
+                                        </div>
+                                        <div class="bookmark-quote">"Nunca se ouviu dizer que algum daqueles que recorreu à vossa proteção fosse por Vós desamparado."</div>
+                                        <div class="bookmark-footer">São Bernardo</div>
+                                    </div>
+
+                                    <!-- Bookmark 1 Back -->
+                                    <div class="bookmark-card-back">
+                                        <div class="bookmark-header">Consagração</div>
+                                        <div class="bookmark-symbol">📿</div>
+                                        <div class="bookmark-quote">"Sou todo vosso, ó Rainha e Mãe minha, e tudo o que tenho vos pertence. Guardai-me como propriedade vossa."</div>
+                                        <div class="bookmark-footer">São Luis G. de Montfort</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Portal View 10: Cartão de Agradecimento -->
+                        <div class="portal-view" id="port-cartao-agradecimento">
+                            <div class="portal-card">
+                                <div class="portal-header-row">
+                                    <div class="portal-title-group">
+                                        <h2>Cartão de Agradecimento</h2>
+                                        <span class="portal-subtitle">Mensagem fraterna de nossa família benfeitora</span>
+                                    </div>
+                                    <button class="btn-download-pdf" onclick="app.downloadFile('Cartao-de-Agradecimento.pdf')">
+                                        📥 Baixar Cartão Imprimível
+                                    </button>
+                                </div>
+
+                                <div class="thankyou-card-mockup">
+                                    <div class="thankyou-header">
+                                        <div class="thankyou-logo">Salvai-me <span>Mãe Santíssima</span></div>
+                                        <div class="thankyou-title">Vínculo de Oração e Evangelização</div>
+                                    </div>
+                                    <div class="thankyou-text">
+                                        <p>Querido Devoto,</p>
+                                        <p>Agradecemos do fundo do coração pela sua generosa cooperação como benfeitor em nossa campanha de evangelização. A sua doação nos permite confeccionar e fazer chegar às mãos de milhares de brasileiros a Camisa Devocional de Nossa Senhora Aparecida e este abençoado Kit Devocional.</p>
+                                        <p>Seu nome e suas intenções de oração foram inseridos na Missa Solene celebrada na intenção das famílias associadas. Que Nossa Senhora cubra você e seu lar com seu amoroso manto de proteção espiritual.</p>
+                                    </div>
+                                    <div class="thankyou-signature">
+                                        Associação Cultural Salvai-me Rainha
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- TOAST NOTIFICATION POPUP -->
+        <div class="toast-notification" id="app-toast">
+            <span class="toast-icon">✨</span>
+            <span class="toast-message" id="toast-text">Ação executada com sucesso!</span>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="app-footer">
+            <div class="footer-logo">Salvai-me <span>Mãe Santíssima</span></div>
+            <div class="footer-nav">
+                <a href="#" onclick="app.switchMainTab('presentation')">Apresentação</a>
+                <a href="#" onclick="app.switchMainTab('portal')">Área de Downloads</a>
+                <a href="https://salvaime.com.br" target="_blank">Sobre a Campanha</a>
+            </div>
+            <div>© 2026 Associação Cultural Salvai-me Mãe Santíssima. Todos os direitos reservados.</div>
+        </footer>
+    </div>
+
+    <!-- Core App Logic -->
+    <script src="app.js?v=2"></script>
+</body>
+</html>
